@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_card_dark">#1A1D23</color>
+    <color name="background_dark">#0F1115</color>
+    <color name="background_elevated_dark">#242830</color>
+    <color name="background_surface_dark">#2A2E38</color>
+    <color name="bottom_sheet_bg">#1A1D23</color>
+    <color name="category_selected_bg">#1A6C63FF</color>
+    <color name="category_selected_stroke">#6C63FF</color>
+    <color name="chart_axis_text">#A0A5B5</color>
+    <color name="chart_grid">#2A2E38</color>
+    <color name="chart_hole">#1A1D23</color>
+    <color name="chart_value_text">#FFFFFF</color>
+    <color name="divider_dark">#2A2E38</color>
+    <color name="divider_light">#2A2E38</color>
+    <color name="nav_bar_bg">#1A1D23</color>
+    <color name="ripple_dark">#33FFFFFF</color>
+    <color name="ripple_light">#33FFFFFF</color>
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_dark">#A0A5B5</color>
+    <color name="text_tertiary_dark">#6B7080</color>
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_lg"
+    android:background="@color/background_card_dark">
+
+    <!-- Drag Handle -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/spacing_md"
+        android:background="@drawable/bg_input_dark" />
+
+    <!-- Header: Category Icon + Name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/spacing_lg">
+
+        <FrameLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp">
+
+            <View
+                android:id="@+id/detail_icon_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_category_icon" />
+
+            <ImageView
+                android:id="@+id/detail_iv_category"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                app:tint="@color/white"
+                android:contentDescription="@string/cd_category_icon" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/spacing_md">
+
+            <TextView
+                android:id="@+id/detail_tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary_dark"
+                android:textSize="@dimen/text_title"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/detail_tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="@dimen/text_caption"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Amount -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_input_dark"
+        android:padding="@dimen/spacing_md"
+        android:layout_marginBottom="@dimen/spacing_sm">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_amount"
+            android:textColor="@color/text_tertiary_dark"
+            android:textSize="@dimen/text_caption" />
+
+        <TextView
+            android:id="@+id/detail_tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="@dimen/text_headline"
+            android:fontFamily="sans-serif-bold" />
+    </LinearLayout>
+
+    <!-- Date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_input_dark"
+        android:padding="@dimen/spacing_md"
+        android:layout_marginBottom="@dimen/spacing_sm">
+
+        <ImageView
+            android:layout_width="@dimen/icon_small"
+            android:layout_height="@dimen/icon_small"
+            android:src="@drawable/ic_calendar"
+            app:tint="@color/primary"
+            android:contentDescription="@string/select_date" />
+
+        <TextView
+            android:id="@+id/detail_tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_sm"
+            android:textColor="@color/text_primary_dark"
+            android:textSize="@dimen/text_body" />
+    </LinearLayout>
+
+    <!-- Note (only shown if present) -->
+    <LinearLayout
+        android:id="@+id/detail_note_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_input_dark"
+        android:padding="@dimen/spacing_md"
+        android:layout_marginBottom="@dimen/spacing_lg"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_note"
+            android:textColor="@color/text_tertiary_dark"
+            android:textSize="@dimen/text_caption" />
+
+        <TextView
+            android:id="@+id/detail_tv_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_primary_dark"
+            android:textSize="@dimen/text_body" />
+    </LinearLayout>
+
+    <!-- Delete Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/detail_btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_subtitle"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/expense_red"
+        app:cornerRadius="@dimen/corner_medium"
+        app:icon="@drawable/ic_delete"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white" />
+
+</LinearLayout>
