@@ -1,6 +1,6 @@
 # 💰 Expense Tracker - Premium Financial Management
 
-![Expense Tracker Banner](expense_tracker_banner_1775674298658.png)
+![Expense Tracker Banner](expense_tracker_banner.png)
 
 A production-grade, highly interactive, and visually stunning Android application built with **Java** and **Clean Architecture**. This isn't just an expense tracker; it's a premium financial experience featuring glassmorphism design, advanced data visualization, and a custom animation engine.
 
