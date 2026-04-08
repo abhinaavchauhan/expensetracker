@@ -77,7 +77,7 @@ com.expensetracker/
 
 | Primary | Accent | Background | Card |
 | :--- | :--- | :--- | :--- |
-| ![#6C63FF](https://via.placeholder.com/15/6C63FF/000000?text=+) `#6C63FF` | ![#00C9A7](https://via.placeholder.com/15/00C9A7/000000?text=+) `#00C9A7` | ![#0F1115](https://via.placeholder.com/15/0F1115/000000?text=+) `#0F1115` | ![#1A1D23](https://via.placeholder.com/15/1A1D23/000000?text=+) `#1A1D23` |
+| ![#6C63FF](https://placehold.co/15/6C63FF/6C63FF.png) `#6C63FF` | ![#00C9A7](https://placehold.co/15/00C9A7/00C9A7.png) `#00C9A7` | ![#0F1115](https://placehold.co/15/0F1115/0F1115.png) `#0F1115` | ![#1A1D23](https://placehold.co/15/1A1D23/1A1D23.png) `#1A1D23` |
 
 ---
 
