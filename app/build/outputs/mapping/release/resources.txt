@@ -30,6 +30,9 @@ Marking id:action_dashboard_to_addExpense:2131230780 reachable: referenced from 
 Marking layout:fragment_dashboard:2131427379 reachable: referenced from base/dex/classes.dex
 Marking id:card_balance:2131230838 reachable: referenced from base/dex/classes.dex
 Marking id:empty_state:2131230935 reachable: referenced from base/dex/classes.dex
+Marking id:header_actions:2131231332 reachable: referenced from base/dex/classes.dex
+Marking id:header_layout:2131231333 reachable: referenced from base/dex/classes.dex
+Marking id:iv_notifications:2131231334 reachable: referenced from base/dex/classes.dex
 Marking id:iv_profile:2131231000 reachable: referenced from base/dex/classes.dex
 Marking id:legend_container:2131231008 reachable: referenced from base/dex/classes.dex
 Marking id:pie_chart:2131231144 reachable: referenced from base/dex/classes.dex
@@ -8067,6 +8070,8 @@ Marking string:category_distribution:2131820620 used because it matches string p
     @com.expensetracker:dimen/corner_large
 @com.expensetracker:drawable/bg_handle_dark : reachable=false
     @com.expensetracker:color/divider_dark
+@com.expensetracker:drawable/bg_icon_secondary : reachable=false
+    @com.expensetracker:color/background_card_dark
 @com.expensetracker:drawable/bg_input_dark : reachable=false
     @com.expensetracker:color/background_elevated_dark
     @com.expensetracker:dimen/corner_medium
@@ -8194,6 +8199,7 @@ Marking string:category_distribution:2131820620 used because it matches string p
 @com.expensetracker:drawable/ic_mtrl_chip_close_circle : reachable=false
 @com.expensetracker:drawable/ic_next : reachable=false
     @com.expensetracker:color/text_primary_dark
+@com.expensetracker:drawable/ic_notifications : reachable=false
 @com.expensetracker:drawable/ic_other : reachable=true
     @com.expensetracker:color/white
 @com.expensetracker:drawable/ic_rent : reachable=true
@@ -8727,6 +8733,8 @@ Marking string:category_distribution:2131820620 used because it matches string p
 @com.expensetracker:id/grouping : reachable=true
 @com.expensetracker:id/groups : reachable=true
 @com.expensetracker:id/hardware : reachable=false
+@com.expensetracker:id/header_actions : reachable=true
+@com.expensetracker:id/header_layout : reachable=true
 @com.expensetracker:id/header_title : reachable=false
 @com.expensetracker:id/hide_ime_id : reachable=false
 @com.expensetracker:id/hideable : reachable=false
@@ -8753,6 +8761,7 @@ Marking string:category_distribution:2131820620 used because it matches string p
 @com.expensetracker:id/iv_category : reachable=true
 @com.expensetracker:id/iv_filter : reachable=true
 @com.expensetracker:id/iv_icon : reachable=true
+@com.expensetracker:id/iv_notifications : reachable=true
 @com.expensetracker:id/iv_profile : reachable=true
 @com.expensetracker:id/jumpToEnd : reachable=false
 @com.expensetracker:id/jumpToStart : reachable=false
@@ -9539,6 +9548,9 @@ Marking string:category_distribution:2131820620 used because it matches string p
     @com.expensetracker:string/nav_dashboard
     @com.expensetracker:dimen/text_title
     @com.expensetracker:color/text_primary_dark
+    @com.expensetracker:dimen/spacing_sm
+    @com.expensetracker:drawable/ic_notifications
+    @com.expensetracker:drawable/bg_icon_secondary
     @com.expensetracker:drawable/img_avatar
     @com.expensetracker:string/cd_profile
     @com.expensetracker:color/primary
@@ -9549,7 +9561,6 @@ Marking string:category_distribution:2131820620 used because it matches string p
     @com.expensetracker:string/total_balance
     @com.expensetracker:dimen/text_display
     @com.expensetracker:color/white
-    @com.expensetracker:dimen/spacing_sm
     @com.expensetracker:dimen/text_caption
     @com.expensetracker:string/monthly_income
     @com.expensetracker:dimen/text_subtitle
@@ -20524,6 +20535,9 @@ The root reachable resources are:
  id:view_tree_saved_state_registry_owner:2131231319
  id:view_tree_view_model_store_owner:2131231320
  id:visible_removing_fragment_view_tag:2131231322
+ id:header_actions:2131231332
+ id:header_layout:2131231333
+ id:iv_notifications:2131231334
  integer:bottom_sheet_slide_duration:2131296259
  integer:material_motion_duration_long_1:2131296296
  integer:mtrl_calendar_year_selector_span:2131296308

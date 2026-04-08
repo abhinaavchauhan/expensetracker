@@ -11648,6 +11648,7 @@ com.expensetracker.R$drawable:
     public static int bg_category_selector
     public static int bg_delete_swipe
     public static int bg_handle_dark
+    public static int bg_icon_secondary
     public static int bg_input_dark
     public static int bg_tooltip
     public static int bg_type_toggle
@@ -11666,6 +11667,7 @@ com.expensetracker.R$drawable:
     public static int ic_launcher_foreground
     public static int ic_more
     public static int ic_next
+    public static int ic_notifications
     public static int ic_search
     public static int ic_settings
     public static int ic_transactions
@@ -11800,7 +11802,6 @@ com.expensetracker.core.animations.AnimationUtils:
     public static void fadeIn(android.view.View,long)
     public static void fadeOut(android.view.View,long)
     private static synthetic void lambda$fadeOut$1(android.view.View)
-    public static void scaleIn(android.view.View,long)
 com.expensetracker.core.constants.CategoryConstants:
     public static final java.lang.String BILLS
     public static final java.lang.String EDUCATION
@@ -33882,6 +33883,8 @@ com.expensetracker.databinding.FragmentAnalyticsBinding:
     public static androidx.core.widget.NestedScrollView getRoot()
 com.expensetracker.databinding.FragmentDashboardBinding:
     public final androidx.core.widget.NestedScrollView dashboardScroll
+    public final android.widget.LinearLayout headerActions
+    public final android.widget.RelativeLayout headerLayout
     public final androidx.core.widget.NestedScrollView rootView
     public static androidx.core.widget.NestedScrollView getRoot()
 com.expensetracker.databinding.FragmentSettingsBinding:
@@ -33908,6 +33911,7 @@ com.expensetracker.presentation.analytics.AnalyticsFragment$$InternalSyntheticLa
 com.expensetracker.presentation.analytics.AnalyticsFragment$$InternalSyntheticLambda$1$9cc8f15cfd4e9d824d01b02f8047007bc52e146b8420e0cf464328d4309261d6$0
 com.expensetracker.presentation.analytics.AnalyticsFragment$$InternalSyntheticLambda$1$d1e49a5c2d00ea1e1d22d265a1653ef371b4ee389fd4541c328fab1bc9c7aceb$0
 com.expensetracker.presentation.dashboard.DashboardFragment$$InternalSyntheticLambda$1$5dbc7d2607dc194bdcfab4c76290004e525780fa1f50cdf14a1d5cad90872392$1
+com.expensetracker.presentation.dashboard.DashboardFragment$$InternalSyntheticLambda$1$5dbc7d2607dc194bdcfab4c76290004e525780fa1f50cdf14a1d5cad90872392$2
 com.expensetracker.presentation.dashboard.DashboardFragment$$InternalSyntheticLambda$1$ab0c1cfa56a8b546192e557070d44bbdbc35ee52326aed3bfa2d233e08fffdc0$1
 com.expensetracker.presentation.dashboard.DashboardFragment$$InternalSyntheticLambda$1$b3be72ef5a4cbc79692ba3a4f9d64ceca5a8a7af7d5faeb5e6fc05eefc2e0160$1
 com.expensetracker.presentation.dashboard.DashboardFragment$$InternalSyntheticLambda$1$b3be72ef5a4cbc79692ba3a4f9d64ceca5a8a7af7d5faeb5e6fc05eefc2e0160$2

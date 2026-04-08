@@ -121,4 +121,19 @@ public class AnimationUtils {
                         .start())
                 .start();
     }
+    /**
+     * Slide down + fade in
+     */
+    public static void slideDownFadeIn(View view, long delay) {
+        if (view == null) return;
+        view.setAlpha(0f);
+        view.setTranslationY(-50f);
+        view.animate()
+                .alpha(1f)
+                .translationY(0f)
+                .setDuration(400)
+                .setStartDelay(delay)
+                .setInterpolator(new DecelerateInterpolator())
+                .start();
+    }
 }

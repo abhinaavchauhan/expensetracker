@@ -123,6 +123,7 @@ drawable bg_category_selector
 drawable bg_delete_swipe
 drawable bg_gradient_card
 drawable bg_handle_dark
+drawable bg_icon_secondary
 drawable bg_input_dark
 drawable bg_tooltip
 drawable bg_type_toggle
@@ -151,6 +152,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_more
 drawable ic_next
+drawable ic_notifications
 drawable ic_other
 drawable ic_rent
 drawable ic_salary
@@ -203,10 +205,13 @@ id et_amount
 id et_note
 id et_search
 id fab_add
+id header_actions
+id header_layout
 id icon_bg
 id iv_category
 id iv_filter
 id iv_icon
+id iv_notifications
 id iv_profile
 id legend_container
 id line_chart

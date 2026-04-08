@@ -76,6 +76,11 @@ public class DashboardFragment extends Fragment {
             showProfilePopup(v);
         });
 
+        binding.ivNotifications.setOnClickListener(v -> {
+            AnimationUtils.scaleBounce(v);
+            Toast.makeText(requireContext(), "No new notifications", Toast.LENGTH_SHORT).show();
+        });
+
         binding.tvSeeAll.setOnClickListener(v -> {
             if (getActivity() != null) {
                 com.google.android.material.bottomnavigation.BottomNavigationView bnv = getActivity().findViewById(R.id.bottom_navigation);
@@ -87,8 +92,14 @@ public class DashboardFragment extends Fragment {
             }
         });
 
+        // Entrance Animations
+        AnimationUtils.slideDownFadeIn(binding.tvGreeting, 100);
+        AnimationUtils.slideDownFadeIn(binding.tvDate, 200);
+        AnimationUtils.scaleIn(binding.ivNotifications, 300);
+        AnimationUtils.scaleIn(binding.ivProfile, 400);
+
         // Animate cards
-        AnimationUtils.slideUpFadeIn(binding.cardBalance, 100);
+        AnimationUtils.slideUpFadeIn(binding.cardBalance, 500);
     }
 
     private String getGreeting() {

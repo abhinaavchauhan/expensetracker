@@ -4,12 +4,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color-v31\\m3_ref_palette_dynamic_neutral_variant12.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_m3_alert_dialog_title.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\m3_alert_dialog_title.xml"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_m3_alert_dialog_title.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\m3_alert_dialog_title.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\animator_fragment_close_exit.xml.flat",
@@ -196,12 +196,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\color-v23\\abc_tint_spinner.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_img_avatar.png.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\img_avatar.png"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_m3_textfield_indicator_text_color.xml.flat",
@@ -216,12 +216,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\mtrl_alert_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_material_personalized_color_primary_text_inverse.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\material_personalized_color_primary_text_inverse.xml"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\anim_btn_checkbox_to_unchecked_check_path_merged_animation.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\anim\\btn_checkbox_to_unchecked_check_path_merged_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_material_personalized_color_primary_text_inverse.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\material_personalized_color_primary_text_inverse.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -340,12 +340,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\material_personalized_hint_foreground_inverse.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_ic_transactions.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_transactions.xml"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\anim_design_snackbar_out.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_ic_transactions.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_transactions.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_btn_radio_on_mtrl.xml.flat",
@@ -360,12 +360,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\animator\\m3_extended_fab_hide_motion_spec.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\interpolator_btn_radio_to_off_mtrl_animation_interpolator_0.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\interpolator\\btn_radio_to_off_mtrl_animation_interpolator_0.xml"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_mtrl_calendar_selected_range.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\mtrl_calendar_selected_range.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\interpolator_btn_radio_to_off_mtrl_animation_interpolator_0.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\interpolator\\btn_radio_to_off_mtrl_animation_interpolator_0.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_mtrl_checkbox_button_checked_unchecked.xml.flat",
@@ -424,16 +424,16 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\m3_elevated_chip_background_color.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_m3_selection_control_ripple_color_selector.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\m3_selection_control_ripple_color_selector.xml"
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xhdpi-v4_ic_call_answer_video_low.png.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable-xhdpi-v4\\ic_call_answer_video_low.png"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-ldrtl-xxxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xhdpi-v4_ic_call_answer_video_low.png.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable-xhdpi-v4\\ic_call_answer_video_low.png"
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_m3_selection_control_ripple_color_selector.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\m3_selection_control_ripple_color_selector.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\anim_m3_motion_fade_exit.xml.flat",
@@ -492,12 +492,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\animator\\m3_chip_state_list_anim.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_material_clock_period_toggle.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\material_clock_period_toggle.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_material_timepicker_clock_text_color.xml.flat",
@@ -560,20 +560,20 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\mtrl_card_view_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_fragment_dashboard.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_dashboard.xml"
-    },
-    {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_chip_bg_state_dark.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\color\\chip_bg_state_dark.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_ic_dropdown.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_dropdown.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_chip_bg_state_dark.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\color\\chip_bg_state_dark.xml"
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_dashboard.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\anim_nav_default_pop_exit_anim.xml.flat",
@@ -648,20 +648,20 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\design_text_input_end_icon.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\navigation_nav_graph.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_notification_tile_bg.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable\\notification_tile_bg.xml"
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_m3_switch_thumb_tint.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\m3_switch_thumb_tint.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_notification_tile_bg.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable\\notification_tile_bg.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\anim_abc_popup_exit.xml.flat",
@@ -704,12 +704,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-ldpi-v4_ic_call_decline_low.png.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable-ldpi-v4\\ic_call_decline_low.png"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_ic_m3_chip_checked_circle.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\drawable\\ic_m3_chip_checked_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-ldpi-v4_ic_call_decline_low.png.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable-ldpi-v4\\ic_call_decline_low.png"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_abc_tooltip.xml.flat",
@@ -764,12 +764,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_material_clockface_view.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\material_clockface_view.xml"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\animator_mtrl_chip_state_list_anim.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\animator\\mtrl_chip_state_list_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_material_clockface_view.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\material_clockface_view.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_m3_timepicker_display_ripple_color.xml.flat",
@@ -808,12 +808,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\mtrl_calendar_months.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_material_on_surface_emphasis_high_type.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\material_on_surface_emphasis_high_type.xml"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\anim_btn_checkbox_to_unchecked_box_inner_merged_animation.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\anim\\btn_checkbox_to_unchecked_box_inner_merged_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_material_on_surface_emphasis_high_type.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\material_on_surface_emphasis_high_type.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xxxhdpi-v4_ic_call_answer.png.flat",
@@ -828,12 +828,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\m3_slider_halo_color.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color-v23_abc_tint_default.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\color-v23\\abc_tint_default.xml"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_abc_ic_clear_material.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color-v23_abc_tint_default.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\color-v23\\abc_tint_default.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-v21_abc_list_divider_material.xml.flat",
@@ -860,12 +860,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\anim\\m3_motion_fade_enter.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\layout-watch-v20\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_mtrl_calendar_day_of_week.xml.flat",
@@ -924,12 +924,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable-xhdpi-v4\\ic_call_answer.png"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\anim-v21_m3_side_sheet_exit_to_right.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\anim-v21\\m3_side_sheet_exit_to_right.xml"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xxxhdpi-v4_ic_call_decline_low.png.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-core-1.12.0-2:\\drawable-xxxhdpi-v4\\ic_call_decline_low.png"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\anim-v21_m3_side_sheet_exit_to_right.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\anim-v21\\m3_side_sheet_exit_to_right.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_abc_star_half_black_48dp.xml.flat",
@@ -976,12 +976,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable\\btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_mtrl_calendar_vertical.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\mtrl_calendar_vertical.xml"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_mtrl_calendar_vertical.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\mtrl_calendar_vertical.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -1040,12 +1040,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_material_divider_color.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\material_divider_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout-v21_notification_action_tombstone.xml.flat",
@@ -1196,12 +1196,12 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\anim-v21\\m3_side_sheet_enter_from_right.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_abc_ic_menu_copy_mtrl_am_alpha.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable\\abc_ic_menu_copy_mtrl_am_alpha.xml"
-    },
-    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_mtrl_switch_track_tint.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\color\\mtrl_switch_track_tint.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable_abc_ic_menu_copy_mtrl_am_alpha.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable\\abc_ic_menu_copy_mtrl_am_alpha.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\color_material_on_surface_disabled.xml.flat",
@@ -2740,6 +2740,10 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
+        "merged": "com.expensetracker.app-merged_res-50:/drawable_ic_notifications.xml.flat",
+        "source": "com.expensetracker.app-main-51:/drawable/ic_notifications.xml"
+    },
+    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-xxhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
@@ -2810,6 +2814,10 @@
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\layout_mtrl_picker_header_title_text.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-material-1.11.0-35:\\layout\\mtrl_picker_header_title_text.xml"
+    },
+    {
+        "merged": "com.expensetracker.app-merged_res-50:/drawable_bg_icon_secondary.xml.flat",
+        "source": "com.expensetracker.app-main-51:/drawable/bg_icon_secondary.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -2954,6 +2962,10 @@
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-mdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-appcompat-1.6.1-12:\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
+        "merged": "com.expensetracker.app-merged_res-50:/layout_fragment_dashboard.xml.flat",
+        "source": "com.expensetracker.app-main-51:/layout/fragment_dashboard.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-50:\\drawable-mdpi-v4_abc_list_focused_holo.9.png.flat",

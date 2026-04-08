@@ -3172,6 +3172,7 @@ drawable bg_category_selector
 drawable bg_delete_swipe
 drawable bg_gradient_card
 drawable bg_handle_dark
+drawable bg_icon_secondary
 drawable bg_input_dark
 drawable bg_tooltip
 drawable bg_type_toggle
@@ -3232,6 +3233,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_next
+drawable ic_notifications
 drawable ic_other
 drawable ic_rent
 drawable ic_salary
@@ -3573,6 +3575,8 @@ id group_divider
 id grouping
 id groups
 id hardware
+id header_actions
+id header_layout
 id header_title
 id hide_ime_id
 id hideable
@@ -3599,6 +3603,7 @@ id item_touch_helper_previous_elevation
 id iv_category
 id iv_filter
 id iv_icon
+id iv_notifications
 id iv_profile
 id jumpToEnd
 id jumpToStart

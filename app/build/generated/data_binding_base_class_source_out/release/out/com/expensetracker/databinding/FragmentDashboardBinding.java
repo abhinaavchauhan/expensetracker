@@ -4,7 +4,9 @@ package com.expensetracker.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,6 +34,15 @@ public final class FragmentDashboardBinding implements ViewBinding {
 
   @NonNull
   public final LinearLayout emptyState;
+
+  @NonNull
+  public final LinearLayout headerActions;
+
+  @NonNull
+  public final RelativeLayout headerLayout;
+
+  @NonNull
+  public final ImageView ivNotifications;
 
   @NonNull
   public final ShapeableImageView ivProfile;
@@ -65,15 +76,19 @@ public final class FragmentDashboardBinding implements ViewBinding {
 
   private FragmentDashboardBinding(@NonNull NestedScrollView rootView,
       @NonNull CardView cardBalance, @NonNull NestedScrollView dashboardScroll,
-      @NonNull LinearLayout emptyState, @NonNull ShapeableImageView ivProfile,
-      @NonNull LinearLayout legendContainer, @NonNull PieChart pieChart,
-      @NonNull RecyclerView rvRecentTransactions, @NonNull TextView tvBalance,
-      @NonNull TextView tvDate, @NonNull TextView tvExpenses, @NonNull TextView tvGreeting,
-      @NonNull TextView tvIncome, @NonNull TextView tvSeeAll) {
+      @NonNull LinearLayout emptyState, @NonNull LinearLayout headerActions,
+      @NonNull RelativeLayout headerLayout, @NonNull ImageView ivNotifications,
+      @NonNull ShapeableImageView ivProfile, @NonNull LinearLayout legendContainer,
+      @NonNull PieChart pieChart, @NonNull RecyclerView rvRecentTransactions,
+      @NonNull TextView tvBalance, @NonNull TextView tvDate, @NonNull TextView tvExpenses,
+      @NonNull TextView tvGreeting, @NonNull TextView tvIncome, @NonNull TextView tvSeeAll) {
     this.rootView = rootView;
     this.cardBalance = cardBalance;
     this.dashboardScroll = dashboardScroll;
     this.emptyState = emptyState;
+    this.headerActions = headerActions;
+    this.headerLayout = headerLayout;
+    this.ivNotifications = ivNotifications;
     this.ivProfile = ivProfile;
     this.legendContainer = legendContainer;
     this.pieChart = pieChart;
@@ -124,6 +139,24 @@ public final class FragmentDashboardBinding implements ViewBinding {
       id = R.id.empty_state;
       LinearLayout emptyState = ViewBindings.findChildViewById(rootView, id);
       if (emptyState == null) {
+        break missingId;
+      }
+
+      id = R.id.header_actions;
+      LinearLayout headerActions = ViewBindings.findChildViewById(rootView, id);
+      if (headerActions == null) {
+        break missingId;
+      }
+
+      id = R.id.header_layout;
+      RelativeLayout headerLayout = ViewBindings.findChildViewById(rootView, id);
+      if (headerLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.iv_notifications;
+      ImageView ivNotifications = ViewBindings.findChildViewById(rootView, id);
+      if (ivNotifications == null) {
         break missingId;
       }
 
@@ -188,8 +221,9 @@ public final class FragmentDashboardBinding implements ViewBinding {
       }
 
       return new FragmentDashboardBinding((NestedScrollView) rootView, cardBalance, dashboardScroll,
-          emptyState, ivProfile, legendContainer, pieChart, rvRecentTransactions, tvBalance, tvDate,
-          tvExpenses, tvGreeting, tvIncome, tvSeeAll);
+          emptyState, headerActions, headerLayout, ivNotifications, ivProfile, legendContainer,
+          pieChart, rvRecentTransactions, tvBalance, tvDate, tvExpenses, tvGreeting, tvIncome,
+          tvSeeAll);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

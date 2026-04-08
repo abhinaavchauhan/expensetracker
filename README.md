@@ -1,82 +1,84 @@
-# 💰 ExpenseTracker - Premium Android Expense Tracker
+# 💰 Expense Tracker - Premium Financial Management
 
-A production-ready, premium fintech-level Android application built with **Java**, **Groovy DSL**, and **Clean Architecture (MVVM)**. Features smooth animations, Material Design UI, MPAndroidChart visualizations, and zero-crash stability.
+![Expense Tracker Banner](expense_tracker_banner_1775674298658.png)
 
-## 🛠️ Tech Stack
+A production-grade, highly interactive, and visually stunning Android application built with **Java** and **Clean Architecture**. This isn't just an expense tracker; it's a premium financial experience featuring glassmorphism design, advanced data visualization, and a custom animation engine.
 
-| Layer | Technology |
-|-------|-----------|
-| Language | Java |
-| Build | Gradle (Groovy DSL) |
-| Architecture | Clean Architecture + MVVM |
-| Database | Room (SQLite) |
-| UI | XML + Material Design 3 |
-| Charts | MPAndroidChart |
-| Animations | ViewPropertyAnimator + ValueAnimator |
-| Min SDK | 24 |
-| Target SDK | 34 |
+---
 
-## 📁 Project Structure
+## 🚀 Experience the Premium Feel
 
-```
+### ✨ Key Features
+
+-   **📊 Dynamic Dashboard**: A real-time overview of your finances with an animated balance counter and an interactive, sorted donut chart that breaks down spending by category.
+-   **📈 Advanced Analytics**: Visualize your financial health over time with smooth line charts and detailed category insights. Filter by Weekly, Monthly, or Yearly periods.
+-   **📂 Professional PDF Export**: Generate beautiful, professional financial reports with one tap. Perfect for tax season or auditing.
+-   **💎 Premium UI/UX**:
+    -   **Glassmorphism Effects**: Modern, translucent UI components that feel light and airy.
+    -   **Floating Navigation**: A custom-built, floating bottom navigation bar with satisfying bounce animations.
+    -   **Dark-First Design**: Optimized for performance and eye comfort with a sleek #0F1115 night-themed aesthetic.
+-   **⚡ Custom Animation Engine**: Smooth entrance transitions, scale-bounce interactions, and layout animations that make the app feel alive.
+-   **🛡️ Robust Data Management**: Powered by Room Database for offline-first reliability and lightning-fast local performance.
+
+---
+
+## 🛠️ Technical Masterpiece
+
+### 🏗️ Architecture
+The app follows **Clean Architecture** principles and the **MVVM** design pattern, ensuring a strict separation of concerns:
+-   **Presentation Layer**: Fragments using ViewBinding and ViewModel for lifecycle-aware UI management.
+-   **Domain Layer**: Pure business logic with dedicated UseCases.
+-   **Data Layer**: Repository pattern managing a Room SQLite database.
+
+### 🧰 Tech Stack
+-   **Language**: Java (Modern Android standards)
+-   **Database**: Room Persistence Library
+-   **Navigation**: Jetpack Navigation Component
+-   **Dependency**: Material 3 Design
+-   **Charts**: MPAndroidChart (Highly customized)
+-   **Animations**: Custom specialized `AnimationUtils` layer
+
+---
+
+## 📁 Project Blueprint
+
+```text
 com.expensetracker/
-├── presentation/          # UI Layer
-│   ├── dashboard/         # Dashboard with balance, charts, recent transactions
-│   ├── addexpense/        # Add expense/income with categories
-│   ├── transactions/      # Transaction list with search, filter, swipe-delete
-│   ├── analytics/         # Charts and insights (weekly/monthly/yearly)
-│   ├── settings/          # Dark mode, budget, export
-│   └── splash/            # Animated splash screen
-├── domain/                # Business Logic
-│   ├── model/             # Expense, Category models
-│   └── usecase/           # AddExpense, GetExpenses, DeleteExpense
-├── data/                  # Data Layer
-│   ├── local/
-│   │   ├── db/            # Room Database (Singleton)
-│   │   ├── dao/           # Data Access Objects
-│   │   └── entity/        # Room Entities
-│   └── repository/        # Repository pattern
-└── core/                  # Utilities
-    ├── utils/             # Date, Currency, Preferences
-    ├── animations/        # Custom animations
-    └── constants/         # Category definitions
+├── presentation/          # View Layer (Fragments, ViewModels)
+│   ├── dashboard/         # Main financial hub
+│   ├── analytics/         # Data visualization & trends
+│   ├── transactions/      # Detailed history & search
+│   └── addexpense/        # Fluid input system
+├── domain/                # Business Logic (Models, UseCases)
+├── data/                  # Data Source (Room, Repositories)
+└── core/                  # Engine Room
+    ├── animations/        # Custom bounce & slide logic
+    ├── export/            # PDF generation logic
+    └── utils/             # Formatters, Currency tools
 ```
 
-## 🚀 Getting Started
+---
+
+## 🛠️ Getting Started
 
 ### Prerequisites
-- Android Studio (latest stable)
+- Android Studio Iguana or newer
 - JDK 17
-- Android device or emulator (API 24+)
+- Android Device/Emulator (API 24+)
 
-### Setup
-1. Open the project in Android Studio
-2. Let Gradle sync complete
-3. Connect your Android device via USB (enable USB debugging)
-4. Click Run ▶
+### Quick Setup
+1. **Clone & Open**: Sync the project in Android Studio.
+2. **Build**: Let Gradle resolve dependencies (MPAndroidChart, Lottie, Room).
+3. **Run**: Deploy to your device and experience the smooth 60fps animations.
 
-## ✨ Features
+---
 
-- **Dashboard** - Animated balance counter, pie chart, recent transactions
-- **Add Expense** - Category grid, date picker, income/expense toggle
-- **Transactions** - Search, filter chips, swipe-to-delete with confirmation
-- **Analytics** - Bar/pie charts, weekly/monthly/yearly views, insight cards
-- **Settings** - Dark/light mode, budget limits, CSV export
-- **Animations** - Counter animations, slide transitions, press effects
+## 🎨 Visual Identity
 
-## 🎨 Design System
+| Primary | Accent | Background | Card |
+| :--- | :--- | :--- | :--- |
+| ![#6C63FF](https://via.placeholder.com/15/6C63FF/000000?text=+) `#6C63FF` | ![#00C9A7](https://via.placeholder.com/15/00C9A7/000000?text=+) `#00C9A7` | ![#0F1115](https://via.placeholder.com/15/0F1115/000000?text=+) `#0F1115` | ![#1A1D23](https://via.placeholder.com/15/1A1D23/000000?text=+) `#1A1D23` |
 
-- **Dark-first theme** (#0F1115 background)
-- **Primary**: #6C63FF | **Accent**: #00C9A7
-- **Material Design 3** components
-- **16-24dp** rounded corners
-- **Premium gradient** cards
+---
 
-## 🏗️ Architecture
-
-```
-UI (Fragment) → ViewModel → UseCase → Repository → Room DB
-Room DB → LiveData → ViewModel → UI (Observer)
-```
-
-All database operations run on background threads via `ExecutorService`.
+Developed with ❤️ by **Abhinav Chauhan**

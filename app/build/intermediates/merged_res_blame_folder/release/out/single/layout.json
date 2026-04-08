@@ -64,6 +64,10 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\item_transaction_header.xml"
     },
     {
+        "merged": "com.expensetracker.app-mergeReleaseResources-48:/layout/fragment_dashboard.xml",
+        "source": "com.expensetracker.app-main-51:/layout/fragment_dashboard.xml"
+    },
+    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\popup_profile_name.xml",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\popup_profile_name.xml"
     },

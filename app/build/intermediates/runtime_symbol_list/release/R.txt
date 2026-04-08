@@ -3171,6 +3171,7 @@ int drawable bg_category_selector 0x7f07007f
 int drawable bg_delete_swipe 0x7f070080
 int drawable bg_gradient_card 0x7f070081
 int drawable bg_handle_dark 0x7f070082
+int drawable bg_icon_secondary 0x7f070116
 int drawable bg_input_dark 0x7f070083
 int drawable bg_tooltip 0x7f070084
 int drawable bg_type_toggle 0x7f070085
@@ -3231,6 +3232,7 @@ int drawable ic_mtrl_chip_checked_black 0x7f0700bb
 int drawable ic_mtrl_chip_checked_circle 0x7f0700bc
 int drawable ic_mtrl_chip_close_circle 0x7f0700bd
 int drawable ic_next 0x7f0700be
+int drawable ic_notifications 0x7f070117
 int drawable ic_other 0x7f0700bf
 int drawable ic_rent 0x7f0700c0
 int drawable ic_salary 0x7f0700c1
@@ -3572,6 +3574,8 @@ int id group_divider 0x7f0800fa
 int id grouping 0x7f0800fb
 int id groups 0x7f0800fc
 int id hardware 0x7f0800fd
+int id header_actions 0x7f080264
+int id header_layout 0x7f080265
 int id header_title 0x7f0800fe
 int id hide_ime_id 0x7f0800ff
 int id hideable 0x7f080100
@@ -3598,6 +3602,7 @@ int id item_touch_helper_previous_elevation 0x7f080114
 int id iv_category 0x7f080115
 int id iv_filter 0x7f080116
 int id iv_icon 0x7f080117
+int id iv_notifications 0x7f080266
 int id iv_profile 0x7f080118
 int id jumpToEnd 0x7f080119
 int id jumpToStart 0x7f08011a
