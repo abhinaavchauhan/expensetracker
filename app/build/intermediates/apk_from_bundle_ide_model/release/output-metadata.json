@@ -17,13 +17,13 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "outputFile": "../../extracted_apks/release/base-master.apk"
+      "outputFile": "../../extracted_apks/release/base-master_2.apk"
     },
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "outputFile": "../../extracted_apks/release/base-xhdpi.apk"
+      "outputFile": "../../extracted_apks/release/base-xxhdpi.apk"
     }
   ],
   "elementType": "File"
