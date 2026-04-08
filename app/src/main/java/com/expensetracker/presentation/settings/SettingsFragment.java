@@ -53,7 +53,6 @@ public class SettingsFragment extends Fragment {
 
         setupDarkMode();
         setupBudget();
-        setupExport();
         setupBackup();
     }
 
@@ -109,59 +108,6 @@ public class SettingsFragment extends Fragment {
                 .show();
     }
 
-    private void setupExport() {
-        binding.llExportCsv.setOnClickListener(v -> exportToCsv());
-    }
-
-    private void exportToCsv() {
-        repository.getExecutorService().execute(() -> {
-            try {
-                List<ExpenseEntity> expenses = repository.getAllExpensesSync();
-                if (expenses == null || expenses.isEmpty()) {
-                    if (getActivity() != null) {
-                        getActivity().runOnUiThread(() ->
-                                Toast.makeText(requireContext(), R.string.no_data, Toast.LENGTH_SHORT).show());
-                    }
-                    return;
-                }
-
-                File dir = new File(requireContext().getExternalFilesDir(null), "exports");
-                if (!dir.exists()) dir.mkdirs();
-
-                String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
-                File file = new File(dir, "expenses_" + timestamp + ".csv");
-
-                FileWriter writer = new FileWriter(file);
-                writer.write("ID,Amount,Category,Note,Date,Type\n");
-
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-                for (ExpenseEntity expense : expenses) {
-                    writer.write(String.format(Locale.getDefault(),
-                            "%d,%.2f,%s,%s,%s,%s\n",
-                            expense.getId(),
-                            expense.getAmount(),
-                            expense.getCategory() != null ? expense.getCategory() : "",
-                            expense.getNote() != null ? expense.getNote().replace(",", ";") : "",
-                            sdf.format(new Date(expense.getDate())),
-                            expense.getType() != null ? expense.getType() : ""));
-                }
-                writer.close();
-
-                if (getActivity() != null) {
-                    getActivity().runOnUiThread(() ->
-                            Toast.makeText(requireContext(),
-                                    getString(R.string.export_success) + "\n" + file.getAbsolutePath(),
-                                    Toast.LENGTH_LONG).show());
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                if (getActivity() != null) {
-                    getActivity().runOnUiThread(() ->
-                            Toast.makeText(requireContext(), R.string.error, Toast.LENGTH_SHORT).show());
-                }
-            }
-        });
-    }
 
     private void setupBackup() {
         binding.llBackup.setOnClickListener(v -> {

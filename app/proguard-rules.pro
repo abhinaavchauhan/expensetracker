@@ -15,3 +15,6 @@
 # Prevent shrinking of these classes
 -keep class com.expensetracker.presentation.** { *; }
 -keep class com.expensetracker.domain.model.** { *; }
+
+# Fix for missing javax.annotation.Nullable in OkHttp/Okio
+-dontwarn javax.annotation.Nullable

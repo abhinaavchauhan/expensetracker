@@ -34,17 +34,42 @@ public class MainActivity extends AppCompatActivity {
 
         if (navHostFragment != null) {
             navController = navHostFragment.getNavController();
-            NavigationUI.setupWithNavController(binding.bottomNavigation, navController);
+            // Setup with NavController manually to add animations
+            binding.bottomNavigation.setOnItemSelectedListener(item -> {
+                if (item.getItemId() != binding.bottomNavigation.getSelectedItemId()) {
+                    View itemView = binding.bottomNavigation.findViewById(item.getItemId());
+                    if (itemView != null) {
+                        com.expensetracker.core.animations.AnimationUtils.scaleBounce(itemView);
+                    }
+                    return NavigationUI.onNavDestinationSelected(item, navController);
+                }
+                return false;
+            });
 
-            // Hide bottom nav and FAB on certain screens
+            // Keep selection in sync with back stack
             navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
                 int destId = destination.getId();
+                android.view.Menu menu = binding.bottomNavigation.getMenu();
+                for (int i = 0; i < menu.size(); i++) {
+                    android.view.MenuItem item = menu.getItem(i);
+                    if (item.getItemId() == destId) {
+                        item.setChecked(true);
+                        break;
+                    }
+                }
+                
+                // Bottom navigation visibility
                 if (destId == R.id.nav_add_expense) {
                     binding.bottomNavigation.setVisibility(View.GONE);
-                    binding.fabAdd.setVisibility(View.GONE);
                 } else {
                     binding.bottomNavigation.setVisibility(View.VISIBLE);
-                    binding.fabAdd.setVisibility(View.VISIBLE);
+                }
+                
+                // FAB visibility: Show only on Dashboard
+                if (destId == R.id.nav_dashboard) {
+                    binding.fabAdd.show();
+                } else {
+                    binding.fabAdd.hide();
                 }
             });
         }

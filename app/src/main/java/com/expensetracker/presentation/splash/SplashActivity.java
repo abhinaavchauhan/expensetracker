@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
         ActivitySplashBinding binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Start Premium Text Loader Animation
+        // Start Premium Animations
         startTextAnimation(binding.loaderTextContainer);
 
         // Hide old static elements as we're using the animated text loader

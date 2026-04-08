@@ -30,40 +30,51 @@ public class CategoryConstants {
         categories.add(new Category(TRANSPORT, R.drawable.ic_transport, "#4DABF7"));
         categories.add(new Category(SHOPPING, R.drawable.ic_shopping, "#FF9F43"));
         categories.add(new Category(ENTERTAINMENT, R.drawable.ic_entertainment, "#A66CFF"));
-        categories.add(new Category(BILLS, R.drawable.ic_bills, "#FF6B6B"));
+        categories.add(new Category(BILLS, R.drawable.ic_bills, "#F06595"));
         categories.add(new Category(HEALTH, R.drawable.ic_health, "#00C9A7"));
-        categories.add(new Category(EDUCATION, R.drawable.ic_education, "#4DABF7"));
+        categories.add(new Category(EDUCATION, R.drawable.ic_education, "#339AF0"));
         categories.add(new Category(TRAVEL, R.drawable.ic_travel, "#FFD93D"));
-        categories.add(new Category(GROCERIES, R.drawable.ic_groceries, "#6BCB77"));
+        categories.add(new Category(GROCERIES, R.drawable.ic_groceries, "#51CF66"));
         categories.add(new Category(RENT, R.drawable.ic_rent, "#E84393"));
-        categories.add(new Category(OTHER, R.drawable.ic_other, "#A0A5B5"));
+        categories.add(new Category(OTHER, R.drawable.ic_other, "#ADB5BD"));
         return categories;
     }
 
     public static List<Category> getIncomeCategories() {
         List<Category> categories = new ArrayList<>();
-        categories.add(new Category(SALARY, R.drawable.ic_salary, "#00C9A7"));
+        categories.add(new Category(SALARY, R.drawable.ic_salary, "#20C997"));
         categories.add(new Category(INVESTMENT, R.drawable.ic_investment, "#6C63FF"));
-        categories.add(new Category(FREELANCE, R.drawable.ic_freelance, "#45B7D1"));
-        categories.add(new Category(GIFT, R.drawable.ic_gift, "#FF9FF3"));
-        categories.add(new Category(OTHER, R.drawable.ic_other, "#A0A5B5"));
+        categories.add(new Category(FREELANCE, R.drawable.ic_freelance, "#3BC9DB"));
+        categories.add(new Category(GIFT, R.drawable.ic_gift, "#FCC2D7"));
+        categories.add(new Category(OTHER, R.drawable.ic_other, "#ADB5BD"));
         return categories;
     }
 
     public static List<Category> getAllCategories() {
-        List<Category> categories = getExpenseCategories();
-        for (Category income : getIncomeCategories()) {
-            boolean exists = false;
-            for (Category expense : categories) {
-                if (expense.getName().equals(income.getName())) {
-                    exists = true;
-                    break;
-                }
-            }
-            if (!exists) {
-                categories.add(income);
+        List<Category> categories = new ArrayList<>();
+        // Add all expense categories except Other
+        for (Category c : getExpenseCategories()) {
+            if (!c.getName().equals(OTHER)) {
+                categories.add(c);
             }
         }
+        // Add all income categories except Other
+        for (Category c : getIncomeCategories()) {
+            if (!c.getName().equals(OTHER)) {
+                boolean exists = false;
+                for (Category existing : categories) {
+                    if (existing.getName().equals(c.getName())) {
+                        exists = true;
+                        break;
+                    }
+                }
+                if (!exists) {
+                    categories.add(c);
+                }
+            }
+        }
+        // Finally add Other
+        categories.add(new Category(OTHER, R.drawable.ic_other, "#ADB5BD"));
         return categories;
     }
 
@@ -89,23 +100,23 @@ public class CategoryConstants {
     }
 
     public static int getCategoryColor(String categoryName) {
-        if (categoryName == null) return android.graphics.Color.parseColor("#A0A5B5");
+        if (categoryName == null) return android.graphics.Color.parseColor("#ADB5BD");
         switch (categoryName) {
             case FOOD: return android.graphics.Color.parseColor("#FF6B6B");
             case TRANSPORT: return android.graphics.Color.parseColor("#4DABF7");
             case SHOPPING: return android.graphics.Color.parseColor("#FF9F43");
             case ENTERTAINMENT: return android.graphics.Color.parseColor("#A66CFF");
-            case BILLS: return android.graphics.Color.parseColor("#FF6B6B");
+            case BILLS: return android.graphics.Color.parseColor("#F06595");
             case HEALTH: return android.graphics.Color.parseColor("#00C9A7");
-            case EDUCATION: return android.graphics.Color.parseColor("#4DABF7");
+            case EDUCATION: return android.graphics.Color.parseColor("#339AF0");
             case TRAVEL: return android.graphics.Color.parseColor("#FFD93D");
-            case GROCERIES: return android.graphics.Color.parseColor("#6BCB77");
+            case GROCERIES: return android.graphics.Color.parseColor("#51CF66");
             case RENT: return android.graphics.Color.parseColor("#E84393");
-            case SALARY: return android.graphics.Color.parseColor("#00C9A7");
+            case SALARY: return android.graphics.Color.parseColor("#20C997");
             case INVESTMENT: return android.graphics.Color.parseColor("#6C63FF");
-            case FREELANCE: return android.graphics.Color.parseColor("#45B7D1");
-            case GIFT: return android.graphics.Color.parseColor("#FF9FF3");
-            default: return android.graphics.Color.parseColor("#A0A5B5");
+            case FREELANCE: return android.graphics.Color.parseColor("#3BC9DB");
+            case GIFT: return android.graphics.Color.parseColor("#FCC2D7");
+            default: return android.graphics.Color.parseColor("#ADB5BD");
         }
     }
 }

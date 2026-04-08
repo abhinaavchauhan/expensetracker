@@ -59,4 +59,8 @@ public class TransactionsViewModel extends AndroidViewModel {
     public LiveData<List<ExpenseEntity>> getTransactionsByDateRange(long start, long end) {
         return repository.getExpensesByDateRange(start, end);
     }
+
+    public LiveData<List<ExpenseEntity>> getFilteredExpenses(String category, String type, Long start, Long end) {
+        return repository.getFilteredExpenses(category, type, start, end);
+    }
 }

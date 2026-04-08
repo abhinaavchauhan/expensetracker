@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <bool name="is_light_status_bar">true</bool>
     <color name="accent">#00C9A7</color>
     <color name="accent_dark">#00A88B</color>
     <color name="accent_light">#33D4B9</color>
@@ -43,6 +44,7 @@
     <color name="expense_red">#FF6B6B</color>
     <color name="gradient_end">#00C9A7</color>
     <color name="gradient_start">#6C63FF</color>
+    <color name="ic_launcher_bg">#FFFFFF</color>
     <color name="income_green">#00C9A7</color>
     <color name="info_blue">#4DABF7</color>
     <color name="nav_bar_bg">#FFFFFF</color>
@@ -234,8 +236,8 @@
     </style>
     <style name="FilterChip" parent="Widget.Material3.Chip.Filter">
         <item name="chipCornerRadius">@dimen/corner_round</item>
-        <item name="chipBackgroundColor">@color/background_elevated_dark</item>
-        <item name="android:textColor">@color/text_secondary_dark</item>
+        <item name="chipBackgroundColor">@color/chip_bg_selector</item>
+        <item name="android:textColor">@color/chip_text_selector</item>
         <item name="checkedIconVisible">false</item>
         <item name="chipStrokeWidth">0dp</item>
     </style>
@@ -300,7 +302,9 @@
         <item name="android:colorBackground">@color/background_dark</item>
         <item name="android:windowBackground">@color/background_dark</item>
         <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:windowLightStatusBar">@bool/is_light_status_bar</item>
         <item name="android:navigationBarColor">@color/nav_bar_bg</item>
+        <item name="android:windowLightNavigationBar">@bool/is_light_status_bar</item>
         <item name="android:textColorPrimary">@color/text_primary_dark</item>
         <item name="android:textColorSecondary">@color/text_secondary_dark</item>
         <item name="android:fontFamily">sans-serif-medium</item>

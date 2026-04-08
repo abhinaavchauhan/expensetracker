@@ -1398,6 +1398,7 @@ int attr yearStyle 0x7f030518
 int attr yearTodayStyle 0x7f030519
 int bool abc_action_bar_embed_tabs 0x7f040000
 int bool abc_config_actionMenuItemAllCaps 0x7f040001
+int bool is_light_status_bar 0x7f040003
 int bool mtrl_btn_textappearance_all_caps 0x7f040002
 int color abc_background_cache_hint_selector_material_dark 0x7f050000
 int color abc_background_cache_hint_selector_material_light 0x7f050001
@@ -1485,6 +1486,8 @@ int color chart_axis_text 0x7f050052
 int color chart_grid 0x7f050053
 int color chart_hole 0x7f050054
 int color chart_value_text 0x7f050055
+int color chip_bg_selector 0x7f05033f
+int color chip_text_selector 0x7f050340
 int color design_bottom_navigation_shadow_color 0x7f050056
 int color design_box_stroke_color 0x7f050057
 int color design_dark_default_color_background 0x7f050058
@@ -1538,6 +1541,7 @@ int color gradient_end 0x7f050087
 int color gradient_start 0x7f050088
 int color highlighted_text_material_dark 0x7f050089
 int color highlighted_text_material_light 0x7f05008a
+int color ic_launcher_bg 0x7f050341
 int color income_green 0x7f05008b
 int color info_blue 0x7f05008c
 int color m3_appbar_overlay_color 0x7f05008d
@@ -3176,6 +3180,7 @@ int drawable design_password_eye 0x7f07008e
 int drawable design_snackbar_background 0x7f07008f
 int drawable ic_add 0x7f070090
 int drawable ic_analytics 0x7f070091
+int drawable ic_app_logo_foreground 0x7f070112
 int drawable ic_arrow_back_black_24 0x7f070092
 int drawable ic_back 0x7f070093
 int drawable ic_bills 0x7f070094
@@ -3202,6 +3207,7 @@ int drawable ic_groceries 0x7f0700a8
 int drawable ic_health 0x7f0700a9
 int drawable ic_investment 0x7f0700aa
 int drawable ic_keyboard_black_24dp 0x7f0700ab
+int drawable ic_launcher_background 0x7f070110
 int drawable ic_launcher_foreground 0x7f0700ac
 int drawable ic_logo_premium 0x7f0700ad
 int drawable ic_m3_chip_check 0x7f0700ae
@@ -3299,8 +3305,6 @@ int drawable notify_panel_notification_icon_bg 0x7f070109
 int drawable test_level_drawable 0x7f07010a
 int drawable tooltip_frame_dark 0x7f07010b
 int drawable tooltip_frame_light 0x7f07010c
-int drawable user_avatar_premium 0x7f07010d
-int drawable user_profile_avatar 0x7f07010e
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
@@ -3408,6 +3412,7 @@ int id btn_apply 0x7f080067
 int id btn_back 0x7f080068
 int id btn_expense_type 0x7f080069
 int id btn_income_type 0x7f08006a
+int id btn_pick_date 0x7f08024d
 int id btn_reset 0x7f08006b
 int id btn_save 0x7f08006c
 int id buttonPanel 0x7f08006d
@@ -4034,6 +4039,7 @@ int layout fragment_transactions 0x7f0b0034
 int layout ime_base_split_test_activity 0x7f0b0035
 int layout ime_secondary_split_test_activity 0x7f0b0036
 int layout item_category 0x7f0b0037
+int layout item_filter_chip 0x7f0b0078
 int layout item_transaction 0x7f0b0038
 int layout m3_alert_dialog 0x7f0b0039
 int layout m3_alert_dialog_actions 0x7f0b003a

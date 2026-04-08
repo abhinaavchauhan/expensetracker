@@ -4,20 +4,28 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_transactions.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_bg_category_ripple.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\bg_category_ripple.xml"
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\layout_bottom_sheet_transaction_detail.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\bottom_sheet_transaction_detail.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_transactions.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_transactions.xml"
     },
     {
-        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\layout_bottom_sheet_transaction_detail.xml.flat",
-        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\bottom_sheet_transaction_detail.xml"
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_bg_category_ripple.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\bg_category_ripple.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_investment.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_investment.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_add.xml.flat",
@@ -36,8 +44,8 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "com.expensetracker.app-merged_res-49:/layout_activity_splash.xml.flat",
-        "source": "com.expensetracker.app-main-51:/layout/activity_splash.xml"
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\color_chip_bg_selector.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\color\\chip_bg_selector.xml"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_launcher_foreground.xml.flat",
@@ -72,6 +80,10 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\bg_category_selector.xml"
     },
     {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_rent.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_rent.xml"
     },
@@ -90,6 +102,10 @@
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\layout_popup_profile_name.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\popup_profile_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\layout_fragment_add_expense.xml.flat",
@@ -114,6 +130,10 @@
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\layout_fragment_dashboard.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_user_avatar_premium.png.flat",
@@ -172,6 +192,14 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\layout_item_filter_chip.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\item_filter_chip.xml"
+    },
+    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_filter.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_filter.xml"
     },
@@ -196,6 +224,18 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\user_profile_avatar.jpg"
     },
     {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_more.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_more.xml"
     },
@@ -216,12 +256,28 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_analytics.xml"
     },
     {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\color_chip_text_selector.xml.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\color\\chip_text_selector.xml"
+    },
+    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_logo_premium.png.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_logo_premium.png"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\color_bottom_nav_color.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\color\\bottom_nav_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_app_logo_premium.png.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_app_logo_premium.png"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\anim_item_fall_down.xml.flat",
@@ -258,6 +314,10 @@
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_bills.xml.flat",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_bills.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_app_logo_foreground.png.flat",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\drawable\\ic_app_logo_foreground.png"
     },
     {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-merged_res-49:\\drawable_ic_entertainment.xml.flat",

@@ -1,10 +1,12 @@
 package com.expensetracker.data.local.entity;
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+import java.io.Serializable;
 
 @Entity(tableName = "expenses")
-public class ExpenseEntity {
+public class ExpenseEntity implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -14,6 +16,7 @@ public class ExpenseEntity {
     private long date;
     private String type; // "income" or "expense"
 
+    @Ignore
     public ExpenseEntity() {}
 
     public ExpenseEntity(double amount, String category, String note, long date, String type) {

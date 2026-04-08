@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\bottom_sheet_export_filter.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\bottom_sheet_export_filter.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\fragment_transactions.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_transactions.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\fragment_settings.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\bottom_sheet_transaction_detail.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\bottom_sheet_transaction_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\fragment_analytics.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_analytics.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\layout_chart_tooltip.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\layout_chart_tooltip.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\item_category.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\item_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\item_chart_legend.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\item_chart_legend.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\bottom_sheet_filter.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\bottom_sheet_filter.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\item_transaction.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\item_transaction.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\fragment_add_expense.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_add_expense.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\item_filter_chip.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\item_filter_chip.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\item_transaction_header.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\item_transaction_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\popup_profile_name.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\popup_profile_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeReleaseResources-48:\\layout\\layout_bottom_nav.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\layout_bottom_nav.xml"
+    }
+]

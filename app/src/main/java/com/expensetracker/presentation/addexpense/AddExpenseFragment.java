@@ -18,6 +18,7 @@ import com.expensetracker.R;
 import com.expensetracker.core.animations.AnimationUtils;
 import com.expensetracker.core.constants.CategoryConstants;
 import com.expensetracker.core.utils.DateUtils;
+import com.expensetracker.data.local.entity.ExpenseEntity;
 import com.expensetracker.databinding.FragmentAddExpenseBinding;
 import com.expensetracker.domain.model.Category;
 
@@ -31,6 +32,7 @@ public class AddExpenseFragment extends Fragment {
     private String selectedCategory = null;
     private long selectedDate = System.currentTimeMillis();
     private boolean isExpenseType = true;
+    private int editTransactionId = -1;
 
     @Nullable
     @Override
@@ -48,7 +50,40 @@ public class AddExpenseFragment extends Fragment {
 
         setupUI();
         setupCategoryGrid();
+        checkEditMode();
         observeViewModel();
+    }
+
+    private void checkEditMode() {
+        if (getArguments() != null) {
+            ExpenseEntity expense = (ExpenseEntity) getArguments().getSerializable("transaction");
+            if (expense != null) {
+                editTransactionId = expense.getId();
+                populateFields(expense);
+            }
+        }
+    }
+
+    private void populateFields(ExpenseEntity expense) {
+        binding.tvTitle.setText(R.string.edit);
+        binding.etAmount.setText(String.valueOf(expense.getAmount()));
+        binding.etNote.setText(expense.getNote());
+        
+        selectedDate = expense.getDate();
+        binding.tvDate.setText(DateUtils.formatDate(selectedDate));
+        
+        isExpenseType = "expense".equalsIgnoreCase(expense.getType());
+        updateTypeToggle();
+        
+        // Update categories grid based on type
+        if (isExpenseType) {
+            categoryAdapter.setCategories(CategoryConstants.getExpenseCategories());
+        } else {
+            categoryAdapter.setCategories(CategoryConstants.getIncomeCategories());
+        }
+        
+        selectedCategory = expense.getCategory();
+        categoryAdapter.setSelectedCategory(selectedCategory);
     }
 
     private void setupUI() {
@@ -160,7 +195,11 @@ public class AddExpenseFragment extends Fragment {
         String note = binding.etNote.getText().toString().trim();
         String type = isExpenseType ? "expense" : "income";
 
-        viewModel.saveExpense(amount, selectedCategory, note, selectedDate, type);
+        if (editTransactionId != -1) {
+            viewModel.updateExpense(editTransactionId, amount, selectedCategory, note, selectedDate, type);
+        } else {
+            viewModel.saveExpense(amount, selectedCategory, note, selectedDate, type);
+        }
     }
 
     private void observeViewModel() {

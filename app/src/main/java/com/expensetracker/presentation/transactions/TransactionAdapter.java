@@ -1,11 +1,9 @@
 package com.expensetracker.presentation.transactions;
 
-import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,7 +18,7 @@ import com.expensetracker.core.utils.CurrencyUtils;
 import com.expensetracker.core.utils.DateUtils;
 import com.expensetracker.data.local.entity.ExpenseEntity;
 
-public class TransactionAdapter extends ListAdapter<ExpenseEntity, TransactionAdapter.TransactionViewHolder> {
+public class TransactionAdapter extends ListAdapter<TransactionListItem, RecyclerView.ViewHolder> {
 
     private OnTransactionClickListener listener;
     private OnTransactionLongClickListener longClickListener;
@@ -29,36 +27,51 @@ public class TransactionAdapter extends ListAdapter<ExpenseEntity, TransactionAd
         super(DIFF_CALLBACK);
     }
 
-    private static final DiffUtil.ItemCallback<ExpenseEntity> DIFF_CALLBACK =
-            new DiffUtil.ItemCallback<ExpenseEntity>() {
+    private static final DiffUtil.ItemCallback<TransactionListItem> DIFF_CALLBACK =
+            new DiffUtil.ItemCallback<TransactionListItem>() {
                 @Override
-                public boolean areItemsTheSame(@NonNull ExpenseEntity oldItem, @NonNull ExpenseEntity newItem) {
-                    return oldItem.getId() == newItem.getId();
+                public boolean areItemsTheSame(@NonNull TransactionListItem oldItem, @NonNull TransactionListItem newItem) {
+                    if (oldItem.getType() != newItem.getType()) return false;
+                    if (oldItem.getType() == TransactionListItem.TYPE_HEADER) {
+                        return oldItem.getMonthYear().equals(newItem.getMonthYear());
+                    } else {
+                        return oldItem.getExpense().getId() == newItem.getExpense().getId();
+                    }
                 }
 
                 @Override
-                public boolean areContentsTheSame(@NonNull ExpenseEntity oldItem, @NonNull ExpenseEntity newItem) {
-                    return oldItem.getAmount() == newItem.getAmount()
-                            && oldItem.getDate() == newItem.getDate()
-                            && (oldItem.getCategory() != null && oldItem.getCategory().equals(newItem.getCategory()))
-                            && (oldItem.getNote() != null && oldItem.getNote().equals(newItem.getNote()));
+                public boolean areContentsTheSame(@NonNull TransactionListItem oldItem, @NonNull TransactionListItem newItem) {
+                    return oldItem.equals(newItem);
                 }
             };
 
+    @Override
+    public int getItemViewType(int position) {
+        return getItem(position).getType();
+    }
+
     @NonNull
     @Override
-    public TransactionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_transaction, parent, false);
-        return new TransactionViewHolder(view);
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        if (viewType == TransactionListItem.TYPE_HEADER) {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.item_transaction_header, parent, false);
+            return new HeaderViewHolder(view);
+        } else {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.item_transaction, parent, false);
+            return new TransactionViewHolder(view);
+        }
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TransactionViewHolder holder, int position) {
-        ExpenseEntity expense = getItem(position);
-        if (expense == null) return;
-
-        holder.bind(expense);
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        TransactionListItem item = getItem(position);
+        if (item.getType() == TransactionListItem.TYPE_HEADER) {
+            ((HeaderViewHolder) holder).bind(item.getMonthYear());
+        } else {
+            ((TransactionViewHolder) holder).bind(item.getExpense());
+        }
     }
 
     public void setOnTransactionClickListener(OnTransactionClickListener listener) {
@@ -67,6 +80,19 @@ public class TransactionAdapter extends ListAdapter<ExpenseEntity, TransactionAd
 
     public void setOnTransactionLongClickListener(OnTransactionLongClickListener listener) {
         this.longClickListener = listener;
+    }
+
+    static class HeaderViewHolder extends RecyclerView.ViewHolder {
+        private final TextView tvTitle;
+
+        HeaderViewHolder(@NonNull View itemView) {
+            super(itemView);
+            tvTitle = itemView.findViewById(R.id.tv_header_title);
+        }
+
+        void bind(String title) {
+            tvTitle.setText(title);
+        }
     }
 
     class TransactionViewHolder extends RecyclerView.ViewHolder {
@@ -86,20 +112,24 @@ public class TransactionAdapter extends ListAdapter<ExpenseEntity, TransactionAd
             tvAmount = itemView.findViewById(R.id.tv_amount);
             tvDate = itemView.findViewById(R.id.tv_date);
 
-            // Tap → open detail bottom sheet
             itemView.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION && listener != null) {
-                    listener.onTransactionClick(getItem(pos));
+                    TransactionListItem item = getItem(pos);
+                    if (item.getType() == TransactionListItem.TYPE_TRANSACTION) {
+                        listener.onTransactionClick(item.getExpense());
+                    }
                 }
             });
 
-            // Long-press → quick delete confirmation
             itemView.setOnLongClickListener(v -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION && longClickListener != null) {
-                    longClickListener.onTransactionLongClick(getItem(pos));
-                    return true;
+                    TransactionListItem item = getItem(pos);
+                    if (item.getType() == TransactionListItem.TYPE_TRANSACTION) {
+                        longClickListener.onTransactionLongClick(item.getExpense());
+                        return true;
+                    }
                 }
                 return false;
             });
@@ -125,7 +155,6 @@ public class TransactionAdapter extends ListAdapter<ExpenseEntity, TransactionAd
 
             tvDate.setText(DateUtils.formatDateShort(expense.getDate()));
 
-            // Set category icon and color
             int iconRes = CategoryConstants.getCategoryIcon(expense.getCategory());
             int color = CategoryConstants.getCategoryColor(expense.getCategory());
             ivCategory.setImageResource(iconRes);

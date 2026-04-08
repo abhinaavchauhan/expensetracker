@@ -58,6 +58,7 @@
     <string name="no_transactions">No transactions yet</string>
     <string name="no_transactions_desc">Start adding your expenses\nto track your spending</string>
     <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
     <string name="all_categories">All</string>
     <string name="filter">Filter</string>
     <string name="swipe_to_delete">Swipe left to delete</string>

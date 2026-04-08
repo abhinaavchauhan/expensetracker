@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_md"
+    android:background="@drawable/bg_card_dark"
+    android:elevation="8dp">
+
+    <TextView
+        android:id="@+id/tv_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abhinav Chauhan"
+        android:textColor="@color/text_primary_dark"
+        android:textSize="@dimen/text_subtitle"
+        android:fontFamily="sans-serif-bold"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Software Developer"
+        android:textColor="@color/text_secondary_dark"
+        android:textSize="@dimen/text_caption"
+        android:gravity="center" />
+
+</LinearLayout>

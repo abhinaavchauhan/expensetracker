@@ -37,6 +37,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -77,7 +78,12 @@ public class DashboardFragment extends Fragment {
 
         binding.tvSeeAll.setOnClickListener(v -> {
             if (getActivity() != null) {
-                Navigation.findNavController(v).navigate(R.id.nav_transactions);
+                com.google.android.material.bottomnavigation.BottomNavigationView bnv = getActivity().findViewById(R.id.bottom_navigation);
+                if (bnv != null) {
+                    bnv.setSelectedItemId(R.id.nav_transactions);
+                } else {
+                    Navigation.findNavController(v).navigate(R.id.nav_transactions);
+                }
             }
         });
 
@@ -152,6 +158,7 @@ public class DashboardFragment extends Fragment {
         TextView tvDate = sheetView.findViewById(R.id.detail_tv_date);
         LinearLayout noteContainer = sheetView.findViewById(R.id.detail_note_container);
         TextView tvNote = sheetView.findViewById(R.id.detail_tv_note);
+        MaterialButton btnEdit = sheetView.findViewById(R.id.detail_btn_edit);
         MaterialButton btnDelete = sheetView.findViewById(R.id.detail_btn_delete);
 
         // Category icon + color
@@ -189,6 +196,15 @@ public class DashboardFragment extends Fragment {
         } else {
             noteContainer.setVisibility(View.GONE);
         }
+
+        // Edit button
+        btnEdit.setOnClickListener(v -> {
+            AnimationUtils.scalePress(v);
+            bottomSheet.dismiss();
+            Bundle args = new Bundle();
+            args.putSerializable("transaction", expense);
+            Navigation.findNavController(requireView()).navigate(R.id.action_dashboard_to_addExpense, args);
+        });
 
         // Delete button
         btnDelete.setOnClickListener(v -> {
@@ -245,7 +261,8 @@ public class DashboardFragment extends Fragment {
         // Recent transactions
         viewModel.getRecentTransactions().observe(getViewLifecycleOwner(), expenses -> {
             if (expenses != null && !expenses.isEmpty()) {
-                transactionAdapter.submitList(expenses);
+                List<com.expensetracker.presentation.transactions.TransactionListItem> groupedList = groupTransactionsByMonth(expenses);
+                transactionAdapter.submitList(groupedList);
                 binding.rvRecentTransactions.setVisibility(View.VISIBLE);
                 binding.emptyState.setVisibility(View.GONE);
             } else {
@@ -258,59 +275,157 @@ public class DashboardFragment extends Fragment {
         viewModel.getMonthlyExpenses().observe(getViewLifecycleOwner(), this::setupPieChart);
     }
 
+    private List<com.expensetracker.presentation.transactions.TransactionListItem> groupTransactionsByMonth(List<ExpenseEntity> expenses) {
+        List<com.expensetracker.presentation.transactions.TransactionListItem> groupedList = new ArrayList<>();
+        String currentMonthYear = "";
+        java.text.SimpleDateFormat monthYearFormat = new java.text.SimpleDateFormat("MMMM yyyy", java.util.Locale.getDefault());
+
+        for (ExpenseEntity expense : expenses) {
+            String itemMonthYear = monthYearFormat.format(new java.util.Date(expense.getDate()));
+            if (!itemMonthYear.equals(currentMonthYear)) {
+                currentMonthYear = itemMonthYear;
+                groupedList.add(new com.expensetracker.presentation.transactions.TransactionListItem(currentMonthYear));
+            }
+            groupedList.add(new com.expensetracker.presentation.transactions.TransactionListItem(expense));
+        }
+        return groupedList;
+    }
+
     private void setupPieChart(List<ExpenseEntity> expenses) {
         if (expenses == null || expenses.isEmpty()) {
             binding.pieChart.setVisibility(View.GONE);
+            binding.legendContainer.setVisibility(View.GONE);
             return;
         }
         binding.pieChart.setVisibility(View.VISIBLE);
+        binding.legendContainer.setVisibility(View.VISIBLE);
 
-        // Group by category
+        // Group by category (expenses only)
         Map<String, Double> categoryMap = new HashMap<>();
+        double totalExpense = 0;
         for (ExpenseEntity expense : expenses) {
-            String cat = expense.getCategory() != null ? expense.getCategory() : "Other";
-            double current = categoryMap.containsKey(cat) ? categoryMap.get(cat) : 0;
-            categoryMap.put(cat, current + expense.getAmount());
+            if ("expense".equalsIgnoreCase(expense.getType())) {
+                String cat = expense.getCategory() != null ? expense.getCategory() : "Other";
+                double current = categoryMap.getOrDefault(cat, 0.0);
+                categoryMap.put(cat, current + expense.getAmount());
+                totalExpense += expense.getAmount();
+            }
+        }
+
+        if (categoryMap.isEmpty()) {
+            binding.pieChart.setVisibility(View.GONE);
+            binding.legendContainer.setVisibility(View.GONE);
+            return;
         }
 
         List<PieEntry> entries = new ArrayList<>();
         List<Integer> colors = new ArrayList<>();
 
-        for (Map.Entry<String, Double> entry : categoryMap.entrySet()) {
-            entries.add(new PieEntry(entry.getValue().floatValue(), entry.getKey()));
-            colors.add(CategoryConstants.getCategoryColor(entry.getKey()));
+        List<String> sortedCategories = new ArrayList<>(categoryMap.keySet());
+        Collections.sort(sortedCategories, (c1, c2) -> {
+            Double v1 = categoryMap.get(c1);
+            Double v2 = categoryMap.get(c2);
+            return Double.compare(v2 != null ? v2 : 0, v1 != null ? v1 : 0);
+        });
+
+        for (String categoryName : sortedCategories) {
+            Double amount = categoryMap.get(categoryName);
+            if (amount != null) {
+                entries.add(new PieEntry(amount.floatValue(), categoryName));
+                colors.add(CategoryConstants.getCategoryColor(categoryName));
+            }
         }
 
         PieDataSet dataSet = new PieDataSet(entries, "");
         dataSet.setColors(colors);
-        dataSet.setSliceSpace(3f);
-        dataSet.setSelectionShift(5f);
-        dataSet.setValueTextSize(11f);
-        dataSet.setValueTextColor(getResources().getColor(R.color.chart_value_text));
-        dataSet.setValueFormatter(new PercentFormatter(binding.pieChart));
-
-        int holeColor = getResources().getColor(R.color.chart_hole);
-        int textColor = getResources().getColor(R.color.text_primary_dark);
+        dataSet.setSliceSpace(4f);
+        dataSet.setSelectionShift(8f);
+        dataSet.setDrawValues(false);
 
         PieData data = new PieData(dataSet);
         binding.pieChart.setData(data);
         binding.pieChart.setUsePercentValues(true);
         binding.pieChart.getDescription().setEnabled(false);
         binding.pieChart.setDrawHoleEnabled(true);
-        binding.pieChart.setHoleColor(holeColor);
-        binding.pieChart.setHoleRadius(45f);
-        binding.pieChart.setTransparentCircleRadius(50f);
-        binding.pieChart.setTransparentCircleColor(holeColor);
-        binding.pieChart.setTransparentCircleAlpha(100);
+        binding.pieChart.setHoleColor(android.graphics.Color.TRANSPARENT);
+        binding.pieChart.setHoleRadius(75f);
+        binding.pieChart.setTransparentCircleRadius(80f);
         binding.pieChart.setDrawCenterText(true);
-        binding.pieChart.setCenterText("Expenses");
-        binding.pieChart.setCenterTextColor(textColor);
+        
+        final double total = totalExpense;
+        binding.pieChart.setCenterText(CurrencyUtils.formatAmountShort(total) + "\nTotal");
+        binding.pieChart.setCenterTextColor(androidx.core.content.ContextCompat.getColor(requireContext(), R.color.text_primary_dark));
         binding.pieChart.setCenterTextSize(14f);
+        
         binding.pieChart.getLegend().setEnabled(false);
-        binding.pieChart.setEntryLabelColor(textColor);
-        binding.pieChart.setEntryLabelTextSize(10f);
+        binding.pieChart.setDrawEntryLabels(false);
+
+        binding.pieChart.setOnChartValueSelectedListener(new com.github.mikephil.charting.listener.OnChartValueSelectedListener() {
+            @Override
+            public void onValueSelected(com.github.mikephil.charting.data.Entry e, com.github.mikephil.charting.highlight.Highlight h) {
+                binding.pieChart.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
+                PieEntry pe = (PieEntry) e;
+                float percentage = (pe.getY() / (float) total) * 100f;
+                binding.pieChart.setCenterText(pe.getLabel() + "\n" + String.format("%.1f%%", percentage));
+            }
+
+            @Override
+            public void onNothingSelected() {
+                binding.pieChart.setCenterText(CurrencyUtils.formatAmountShort(total) + "\nTotal");
+            }
+        });
+
         binding.pieChart.animateY(1000, Easing.EaseInOutQuad);
         binding.pieChart.invalidate();
+
+        setupDashboardLegend(categoryMap, totalExpense);
+    }
+
+    private void setupDashboardLegend(Map<String, Double> categoryMap, double totalExpense) {
+        binding.legendContainer.removeAllViews();
+        LayoutInflater inflater = LayoutInflater.from(requireContext());
+
+        List<String> sortedCategories = new ArrayList<>(categoryMap.keySet());
+        Collections.sort(sortedCategories, (c1, c2) -> {
+            Double v1 = categoryMap.get(c1);
+            Double v2 = categoryMap.get(c2);
+            return Double.compare(v2 != null ? v2 : 0, v1 != null ? v1 : 0);
+        });
+
+        for (String categoryName : sortedCategories) {
+            Double amount = categoryMap.get(categoryName);
+            if (amount == null) continue;
+
+            View legendItem = inflater.inflate(R.layout.item_chart_legend, binding.legendContainer, false);
+            View colorView = legendItem.findViewById(R.id.view_color);
+            TextView tvCategory = legendItem.findViewById(R.id.tv_category);
+            TextView tvAmount = legendItem.findViewById(R.id.tv_amount);
+
+            int color = CategoryConstants.getCategoryColor(categoryName);
+            GradientDrawable shape = new GradientDrawable();
+            shape.setShape(GradientDrawable.RECTANGLE);
+            shape.setCornerRadius(10f);
+            shape.setColor(color);
+            colorView.setBackground(shape);
+
+            tvCategory.setText(categoryName);
+
+            double percentage = (amount / totalExpense) * 100;
+            tvAmount.setText(String.format("%.1f%%", percentage));
+
+            legendItem.setOnClickListener(v -> {
+                v.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
+                for (int i = 0; i < binding.pieChart.getData().getDataSet().getEntryCount(); i++) {
+                    PieEntry e = (PieEntry) binding.pieChart.getData().getDataSet().getEntryForIndex(i);
+                    if (e.getLabel().equals(categoryName)) {
+                        binding.pieChart.highlightValue(i, 0);
+                        break;
+                    }
+                }
+            });
+
+            binding.legendContainer.addView(legendItem);
+        }
     }
 
     @Override

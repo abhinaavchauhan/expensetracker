@@ -98,9 +98,18 @@ public class ExpenseRepository {
         return expenseDao.getTransactionCount(startDate, endDate);
     }
 
+    // Combined filter
+    public LiveData<List<ExpenseEntity>> getFilteredExpenses(String category, String type, Long startDate, Long endDate) {
+        return expenseDao.getFilteredExpenses(category, type, startDate, endDate);
+    }
+
     // Sync versions for export
     public List<ExpenseEntity> getAllExpensesSync() {
         return expenseDao.getAllExpensesSync();
+    }
+
+    public List<ExpenseEntity> getExpensesByDateRangeSync(long startDate, long endDate) {
+        return expenseDao.getExpensesByDateRangeSync(startDate, endDate);
     }
 
     public ExecutorService getExecutorService() {

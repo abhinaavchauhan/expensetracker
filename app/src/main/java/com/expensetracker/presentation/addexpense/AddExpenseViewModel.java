@@ -21,25 +21,38 @@ public class AddExpenseViewModel extends AndroidViewModel {
     }
 
     public void saveExpense(double amount, String category, String note, long date, String type) {
-        // Validation
-        if (amount <= 0) {
-            errorMessage.setValue("Please enter a valid amount");
-            return;
-        }
-        if (category == null || category.isEmpty()) {
-            errorMessage.setValue("Please select a category");
-            return;
-        }
-        if (date <= 0) {
-            date = System.currentTimeMillis();
-        }
-        if (note == null) {
-            note = "";
-        }
+        if (!validate(amount, category)) return;
+        
+        if (date <= 0) date = System.currentTimeMillis();
+        if (note == null) note = "";
 
         ExpenseEntity expense = new ExpenseEntity(amount, category, note, date, type);
         repository.insert(expense);
         savingResult.setValue(true);
+    }
+
+    public void updateExpense(int id, double amount, String category, String note, long date, String type) {
+        if (!validate(amount, category)) return;
+
+        if (date <= 0) date = System.currentTimeMillis();
+        if (note == null) note = "";
+
+        ExpenseEntity expense = new ExpenseEntity(amount, category, note, date, type);
+        expense.setId(id);
+        repository.update(expense);
+        savingResult.setValue(true);
+    }
+
+    private boolean validate(double amount, String category) {
+        if (amount <= 0) {
+            errorMessage.setValue("Please enter a valid amount");
+            return false;
+        }
+        if (category == null || category.isEmpty()) {
+            errorMessage.setValue("Please select a category");
+            return false;
+        }
+        return true;
     }
 
     public MutableLiveData<Boolean> getSavingResult() {

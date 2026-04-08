@@ -60,6 +60,21 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         return null;
     }
 
+    public void setSelectedCategory(String categoryName) {
+        if (categoryName == null) {
+            selectedPosition = -1;
+            notifyDataSetChanged();
+            return;
+        }
+        for (int i = 0; i < categories.size(); i++) {
+            if (categories.get(i).getName().equalsIgnoreCase(categoryName)) {
+                selectedPosition = i;
+                notifyDataSetChanged();
+                return;
+            }
+        }
+    }
+
     class CategoryViewHolder extends RecyclerView.ViewHolder {
         private final LinearLayout container;
         private final View iconBg;

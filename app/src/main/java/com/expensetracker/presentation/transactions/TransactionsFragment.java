@@ -34,6 +34,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.navigation.Navigation;
 
 import com.expensetracker.R;
 import com.expensetracker.core.constants.CategoryConstants;
@@ -44,6 +45,7 @@ import com.expensetracker.databinding.FragmentTransactionsBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.datepicker.MaterialDatePicker;
 
 import java.util.List;
 
@@ -53,6 +55,12 @@ public class TransactionsFragment extends Fragment {
     private TransactionsViewModel viewModel;
     private TransactionAdapter adapter;
     private LiveData<List<ExpenseEntity>> currentData;
+
+    // Filter state
+    private String selectedType = "all";
+    private String selectedCategory = null;
+    private Integer selectedMonth = null;
+    private Long selectedExactDate = null;
 
     @Nullable
     @Override
@@ -71,7 +79,7 @@ public class TransactionsFragment extends Fragment {
         setupRecyclerView();
         setupSearch();
         setupFilters();
-        observeData("all");
+        applyAllFilters(); // Initial load
     }
 
     private void setupRecyclerView() {
@@ -100,8 +108,12 @@ public class TransactionsFragment extends Fragment {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAdapterPosition();
-                ExpenseEntity expense = adapter.getCurrentList().get(position);
-                showDeleteConfirmationWithReset(expense, position);
+                TransactionListItem item = adapter.getCurrentList().get(position);
+                if (item.getType() == TransactionListItem.TYPE_TRANSACTION) {
+                    showDeleteConfirmationWithReset(item.getExpense(), position);
+                } else {
+                    adapter.notifyItemChanged(position); // Prevent header swipe
+                }
             }
 
             @Override
@@ -155,6 +167,7 @@ public class TransactionsFragment extends Fragment {
         TextView tvDate = sheetView.findViewById(R.id.detail_tv_date);
         LinearLayout noteContainer = sheetView.findViewById(R.id.detail_note_container);
         TextView tvNote = sheetView.findViewById(R.id.detail_tv_note);
+        MaterialButton btnEdit = sheetView.findViewById(R.id.detail_btn_edit);
         MaterialButton btnDelete = sheetView.findViewById(R.id.detail_btn_delete);
 
         // Category icon + color
@@ -192,6 +205,15 @@ public class TransactionsFragment extends Fragment {
         } else {
             noteContainer.setVisibility(View.GONE);
         }
+
+        // Edit button
+        btnEdit.setOnClickListener(v -> {
+            com.expensetracker.core.animations.AnimationUtils.scalePress(v);
+            bottomSheet.dismiss();
+            Bundle args = new Bundle();
+            args.putSerializable("transaction", expense);
+            Navigation.findNavController(requireView()).navigate(R.id.action_transactions_to_addExpense, args);
+        });
 
         // Delete button
         btnDelete.setOnClickListener(v -> {
@@ -260,7 +282,7 @@ public class TransactionsFragment extends Fragment {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String query = s.toString().trim();
                 if (query.isEmpty()) {
-                    observeData("all");
+                    applyAllFilters();
                 } else {
                     observeSearchResults(query);
                 }
@@ -274,36 +296,13 @@ public class TransactionsFragment extends Fragment {
     private void setupFilters() {
         binding.chipGroupFilter.setOnCheckedStateChangeListener((group, checkedIds) -> {
             if (checkedIds.contains(R.id.chip_all)) {
-                observeData("all");
+                selectedType = "all";
             } else if (checkedIds.contains(R.id.chip_income)) {
-                observeData("income");
+                selectedType = "income";
             } else if (checkedIds.contains(R.id.chip_expense)) {
-                observeData("expense");
+                selectedType = "expense";
             }
-        });
-    }
-
-    private void observeData(String filter) {
-        if (currentData != null) {
-            currentData.removeObservers(getViewLifecycleOwner());
-        }
-
-        if ("all".equals(filter)) {
-            currentData = viewModel.getAllTransactions();
-        } else {
-            currentData = viewModel.getTransactionsByType(filter);
-        }
-
-        currentData.observe(getViewLifecycleOwner(), expenses -> {
-            if (expenses != null && !expenses.isEmpty()) {
-                adapter.submitList(expenses);
-                binding.rvTransactions.setVisibility(View.VISIBLE);
-                binding.emptyState.setVisibility(View.GONE);
-            } else {
-                adapter.submitList(null);
-                binding.rvTransactions.setVisibility(View.GONE);
-                binding.emptyState.setVisibility(View.VISIBLE);
-            }
+            applyAllFilters();
         });
     }
 
@@ -326,69 +325,127 @@ public class TransactionsFragment extends Fragment {
         MaterialButton btnReset = view.findViewById(R.id.btn_reset);
         MaterialButton btnApply = view.findViewById(R.id.btn_apply);
 
-        // Populate Months
+        // Populate and Pre-select Months
         String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         for (int i = 0; i < months.length; i++) {
-            Chip chip = new Chip(requireContext());
+            Chip chip = (Chip) getLayoutInflater().inflate(R.layout.item_filter_chip, cgMonths, false);
             chip.setText(months[i]);
-            chip.setCheckable(true);
             chip.setTag(i); // Store index
             cgMonths.addView(chip);
+
+            if (selectedMonth != null && selectedMonth == i) {
+                chip.setChecked(true);
+            }
         }
 
-        // Setup Categories
+        MaterialButton btnPickDate = view.findViewById(R.id.btn_pick_date);
+        btnPickDate.setOnClickListener(v -> {
+            MaterialDatePicker<Long> datePicker = MaterialDatePicker.Builder.datePicker()
+                    .setTitleText("Select Date")
+                    .setSelection(selectedExactDate != null ? selectedExactDate : MaterialDatePicker.todayInUtcMilliseconds())
+                    .build();
+            datePicker.addOnPositiveButtonClickListener(selection -> {
+                selectedExactDate = selection;
+                cgMonths.clearCheck(); // Clear month selection if an exact date is chosen
+                btnPickDate.setText(DateUtils.formatDateShort(selection));
+            });
+            datePicker.show(getParentFragmentManager(), "date_picker");
+        });
+
+        if (selectedExactDate != null) {
+            btnPickDate.setText(DateUtils.formatDateShort(selectedExactDate));
+        }
+
+        // Setup and Pre-select Categories
         CategoryAdapter categoryAdapter = new CategoryAdapter();
         rvCategories.setLayoutManager(new androidx.recyclerview.widget.GridLayoutManager(requireContext(), 4));
         rvCategories.setAdapter(categoryAdapter);
-        categoryAdapter.setCategories(CategoryConstants.getAllCategories());
+        List<Category> allCategories = CategoryConstants.getAllCategories();
+        categoryAdapter.setCategories(allCategories);
 
-        final String[] selectedCategory = {null};
-        categoryAdapter.setOnCategorySelectedListener(category -> selectedCategory[0] = category.getName());
+        // Pre-select current category
+        if (selectedCategory != null) {
+            categoryAdapter.setSelectedCategory(selectedCategory);
+        }
+
+        categoryAdapter.setOnCategorySelectedListener(category -> selectedCategory = category.getName());
 
         btnApply.setOnClickListener(v -> {
             int checkedChipId = cgMonths.getCheckedChipId();
-            Integer selectedMonth = null;
             if (checkedChipId != -1) {
                 selectedMonth = (Integer) cgMonths.findViewById(checkedChipId).getTag();
+                selectedExactDate = null;
+            } else {
+                selectedMonth = null;
             }
 
-            applyFilters(selectedMonth, selectedCategory[0]);
+            applyAllFilters();
             dialog.dismiss();
         });
 
         btnReset.setOnClickListener(v -> {
-            observeData("all");
+            selectedMonth = null;
+            selectedExactDate = null;
+            selectedCategory = null;
+            selectedType = "all";
+            binding.chipGroupFilter.check(R.id.chip_all);
+            applyAllFilters();
             dialog.dismiss();
         });
 
         dialog.show();
     }
 
-    private void applyFilters(Integer month, String category) {
+    private void applyAllFilters() {
         if (currentData != null) {
             currentData.removeObservers(getViewLifecycleOwner());
         }
 
-        if (month != null) {
+        Long start = null;
+        Long end = null;
+
+        if (selectedExactDate != null) {
+            Calendar utcCal = Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"));
+            utcCal.setTimeInMillis(selectedExactDate);
+            
+            Calendar localCal = Calendar.getInstance();
+            localCal.set(utcCal.get(Calendar.YEAR), utcCal.get(Calendar.MONTH), utcCal.get(Calendar.DAY_OF_MONTH), 0, 0, 0);
+            localCal.set(Calendar.MILLISECOND, 0);
+            start = localCal.getTimeInMillis();
+
+            localCal.set(Calendar.HOUR_OF_DAY, 23);
+            localCal.set(Calendar.MINUTE, 59);
+            localCal.set(Calendar.SECOND, 59);
+            localCal.set(Calendar.MILLISECOND, 999);
+            end = localCal.getTimeInMillis();
+        } else if (selectedMonth != null) {
             Calendar cal = Calendar.getInstance();
-            cal.set(Calendar.MONTH, month);
+            cal.set(Calendar.MONTH, selectedMonth);
             cal.set(Calendar.DAY_OF_MONTH, 1);
-            long start = cal.getTimeInMillis();
+            cal.set(Calendar.HOUR_OF_DAY, 0);
+            cal.set(Calendar.MINUTE, 0);
+            cal.set(Calendar.SECOND, 0);
+            cal.set(Calendar.MILLISECOND, 0);
+            start = cal.getTimeInMillis();
+
             cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DAY_OF_MONTH));
-            long end = cal.getTimeInMillis();
-            currentData = viewModel.getTransactionsByDateRange(start, end);
-        } else if (category != null) {
-            currentData = viewModel.getTransactionsByCategory(category);
-        } else {
-            currentData = viewModel.getAllTransactions();
+            cal.set(Calendar.HOUR_OF_DAY, 23);
+            cal.set(Calendar.MINUTE, 59);
+            cal.set(Calendar.SECOND, 59);
+            cal.set(Calendar.MILLISECOND, 999);
+            end = cal.getTimeInMillis();
         }
 
+        String typeToQuery = "all".equals(selectedType) ? null : selectedType;
+
+        currentData = viewModel.getFilteredExpenses(selectedCategory, typeToQuery, start, end);
         currentData.observe(getViewLifecycleOwner(), this::updateAdapterUI);
     }
 
     private void updateAdapterUI(List<ExpenseEntity> expenses) {
         if (expenses != null && !expenses.isEmpty()) {
-            adapter.submitList(expenses);
+            List<TransactionListItem> groupedList = groupTransactionsByMonth(expenses);
+            adapter.submitList(groupedList);
             binding.rvTransactions.setVisibility(View.VISIBLE);
             binding.emptyState.setVisibility(View.GONE);
         } else {
@@ -396,6 +453,22 @@ public class TransactionsFragment extends Fragment {
             binding.rvTransactions.setVisibility(View.GONE);
             binding.emptyState.setVisibility(View.VISIBLE);
         }
+    }
+
+    private List<TransactionListItem> groupTransactionsByMonth(List<ExpenseEntity> expenses) {
+        List<TransactionListItem> groupedList = new ArrayList<>();
+        String currentMonthYear = "";
+        java.text.SimpleDateFormat monthYearFormat = new java.text.SimpleDateFormat("MMMM yyyy", java.util.Locale.getDefault());
+
+        for (ExpenseEntity expense : expenses) {
+            String itemMonthYear = monthYearFormat.format(new java.util.Date(expense.getDate()));
+            if (!itemMonthYear.equals(currentMonthYear)) {
+                currentMonthYear = itemMonthYear;
+                groupedList.add(new TransactionListItem(currentMonthYear));
+            }
+            groupedList.add(new TransactionListItem(expense));
+        }
+        return groupedList;
     }
 
     @Override

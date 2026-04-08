@@ -48,4 +48,8 @@ public class AnalyticsViewModel extends AndroidViewModel {
     public LiveData<List<ExpenseEntity>> getYearlyExpenses() {
         return repository.getExpensesByDateRange(DateUtils.getStartOfYear(), DateUtils.getEndOfYear());
     }
+
+    public List<ExpenseEntity> getExpensesByDateRangeSync(long start, long end) {
+        return repository.getExpensesByDateRangeSync(start, end);
+    }
 }

@@ -1399,6 +1399,7 @@ attr yearStyle
 attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
+bool is_light_status_bar
 bool mtrl_btn_textappearance_all_caps
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
@@ -1486,6 +1487,8 @@ color chart_axis_text
 color chart_grid
 color chart_hole
 color chart_value_text
+color chip_bg_selector
+color chip_text_selector
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1539,6 +1542,7 @@ color gradient_end
 color gradient_start
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_bg
 color income_green
 color info_blue
 color m3_appbar_overlay_color
@@ -3177,6 +3181,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_add
 drawable ic_analytics
+drawable ic_app_logo_foreground
 drawable ic_arrow_back_black_24
 drawable ic_back
 drawable ic_bills
@@ -3203,6 +3208,7 @@ drawable ic_groceries
 drawable ic_health
 drawable ic_investment
 drawable ic_keyboard_black_24dp
+drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_logo_premium
 drawable ic_m3_chip_check
@@ -3300,8 +3306,6 @@ drawable notify_panel_notification_icon_bg
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
-drawable user_avatar_premium
-drawable user_profile_avatar
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3409,6 +3413,7 @@ id btn_apply
 id btn_back
 id btn_expense_type
 id btn_income_type
+id btn_pick_date
 id btn_reset
 id btn_save
 id buttonPanel
@@ -4035,6 +4040,7 @@ layout fragment_transactions
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_category
+layout item_filter_chip
 layout item_transaction
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

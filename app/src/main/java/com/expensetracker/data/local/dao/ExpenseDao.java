@@ -62,10 +62,21 @@ public interface ExpenseDao {
     @Query("SELECT COUNT(*) FROM expenses WHERE date BETWEEN :startDate AND :endDate")
     LiveData<Integer> getTransactionCount(long startDate, long endDate);
 
+    @Query("SELECT * FROM expenses WHERE " +
+           "(:category IS NULL OR category = :category) AND " +
+           "(:type IS NULL OR type = :type) AND " +
+           "(:startDate IS NULL OR date >= :startDate) AND " +
+           "(:endDate IS NULL OR date <= :endDate) " +
+           "ORDER BY date DESC")
+    LiveData<List<ExpenseEntity>> getFilteredExpenses(String category, String type, Long startDate, Long endDate);
+
     // Synchronous versions for background ops
     @Query("SELECT * FROM expenses ORDER BY date DESC")
     List<ExpenseEntity> getAllExpensesSync();
 
     @Query("SELECT SUM(amount) FROM expenses WHERE type = 'expense' AND date BETWEEN :startDate AND :endDate")
     Double getTotalExpenseSync(long startDate, long endDate);
+
+    @Query("SELECT * FROM expenses WHERE date BETWEEN :startDate AND :endDate ORDER BY date DESC")
+    List<ExpenseEntity> getExpensesByDateRangeSync(long startDate, long endDate);
 }

@@ -17,6 +17,7 @@ import java.lang.Class;
 import java.lang.Double;
 import java.lang.Exception;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -845,6 +846,120 @@ public final class ExpenseDao_Impl implements ExpenseDao {
             _result = _tmp;
           } else {
             _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
+  public LiveData<List<ExpenseEntity>> getFilteredExpenses(final String category, final String type,
+      final Long startDate, final Long endDate) {
+    final String _sql = "SELECT * FROM expenses WHERE (? IS NULL OR category = ?) AND (? IS NULL OR type = ?) AND (? IS NULL OR date >= ?) AND (? IS NULL OR date <= ?) ORDER BY date DESC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 8);
+    int _argIndex = 1;
+    if (category == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, category);
+    }
+    _argIndex = 2;
+    if (category == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, category);
+    }
+    _argIndex = 3;
+    if (type == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, type);
+    }
+    _argIndex = 4;
+    if (type == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, type);
+    }
+    _argIndex = 5;
+    if (startDate == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindLong(_argIndex, startDate);
+    }
+    _argIndex = 6;
+    if (startDate == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindLong(_argIndex, startDate);
+    }
+    _argIndex = 7;
+    if (endDate == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindLong(_argIndex, endDate);
+    }
+    _argIndex = 8;
+    if (endDate == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindLong(_argIndex, endDate);
+    }
+    return __db.getInvalidationTracker().createLiveData(new String[] {"expenses"}, false, new Callable<List<ExpenseEntity>>() {
+      @Override
+      @Nullable
+      public List<ExpenseEntity> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfAmount = CursorUtil.getColumnIndexOrThrow(_cursor, "amount");
+          final int _cursorIndexOfCategory = CursorUtil.getColumnIndexOrThrow(_cursor, "category");
+          final int _cursorIndexOfNote = CursorUtil.getColumnIndexOrThrow(_cursor, "note");
+          final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
+          final int _cursorIndexOfType = CursorUtil.getColumnIndexOrThrow(_cursor, "type");
+          final List<ExpenseEntity> _result = new ArrayList<ExpenseEntity>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final ExpenseEntity _item;
+            _item = new ExpenseEntity();
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            _item.setId(_tmpId);
+            final double _tmpAmount;
+            _tmpAmount = _cursor.getDouble(_cursorIndexOfAmount);
+            _item.setAmount(_tmpAmount);
+            final String _tmpCategory;
+            if (_cursor.isNull(_cursorIndexOfCategory)) {
+              _tmpCategory = null;
+            } else {
+              _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+            }
+            _item.setCategory(_tmpCategory);
+            final String _tmpNote;
+            if (_cursor.isNull(_cursorIndexOfNote)) {
+              _tmpNote = null;
+            } else {
+              _tmpNote = _cursor.getString(_cursorIndexOfNote);
+            }
+            _item.setNote(_tmpNote);
+            final long _tmpDate;
+            _tmpDate = _cursor.getLong(_cursorIndexOfDate);
+            _item.setDate(_tmpDate);
+            final String _tmpType;
+            if (_cursor.isNull(_cursorIndexOfType)) {
+              _tmpType = null;
+            } else {
+              _tmpType = _cursor.getString(_cursorIndexOfType);
+            }
+            _item.setType(_tmpType);
+            _result.add(_item);
           }
           return _result;
         } finally {

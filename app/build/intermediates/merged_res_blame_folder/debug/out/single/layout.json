@@ -44,6 +44,10 @@
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\item_transaction.xml"
     },
     {
+        "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeDebugResources-48:\\layout\\item_filter_chip.xml",
+        "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\item_filter_chip.xml"
+    },
+    {
         "merged": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-mergeDebugResources-48:\\layout\\fragment_analytics.xml",
         "source": "C:\\Users\\kshat\\.gradle\\daemon\\8.9\\com.expensetracker.app-main-51:\\layout\\fragment_analytics.xml"
     },

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/spacing_md"
+    android:paddingTop="@dimen/spacing_md"
+    android:paddingBottom="@dimen/spacing_sm"
+    android:background="@color/background_dark">
+
+    <TextView
+        android:id="@+id/tv_header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OCTOBER 2023"
+        android:textColor="@color/text_secondary_dark"
+        android:textSize="11sp"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="true"
+        android:letterSpacing="0.15" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="#1AFFFFFF" />
+
+</LinearLayout>

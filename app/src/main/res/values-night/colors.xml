@@ -33,7 +33,15 @@
     <!-- Bottom sheet background -->
     <color name="bottom_sheet_bg">#1A1D23</color>
 
-    <!-- Selected state for category (dark) -->
-    <color name="category_selected_bg">#1A6C63FF</color>
-    <color name="category_selected_stroke">#6C63FF</color>
+    <!-- Chart Gradients (Dark) -->
+    <color name="chart_gradient_start">#4D6C63FF</color>
+    <color name="chart_gradient_end">#006C63FF</color>
+    <color name="chart_tooltip_bg">#E6FFFFFF</color>
+    <color name="color_on_tooltip_primary">#1A1D23</color>
+    <color name="color_on_tooltip_secondary">#5A6070</color>
+
+    <!-- Launcher -->
+    <color name="ic_launcher_bg">#000000</color>
+    <!-- Bottom Nav -->
+    <color name="active_indicator_color">#336C63FF</color>
 </resources>

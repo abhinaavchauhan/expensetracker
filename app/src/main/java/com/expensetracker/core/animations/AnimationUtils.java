@@ -103,4 +103,22 @@ public class AnimationUtils {
                 .setInterpolator(new DecelerateInterpolator())
                 .start();
     }
+    /**
+     * Scale bounce animation
+     */
+    public static void scaleBounce(View view) {
+        if (view == null) return;
+        view.animate()
+                .scaleX(1.2f)
+                .scaleY(1.2f)
+                .setDuration(150)
+                .setInterpolator(new DecelerateInterpolator())
+                .withEndAction(() -> view.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(300)
+                        .setInterpolator(new android.view.animation.OvershootInterpolator())
+                        .start())
+                .start();
+    }
 }

@@ -1,0 +1,53 @@
+com.expensetracker.app-core-ktx-1.12.0-0 C:\Users\kshat\.gradle\caches\8.9\transforms\0386c0b5cfbb72238fed268bf11d9cda\transformed\core-ktx-1.12.0\res
+com.expensetracker.app-window-1.0.0-1 C:\Users\kshat\.gradle\caches\8.9\transforms\038f7abc3ed43720a12a588c104502b6\transformed\window-1.0.0\res
+com.expensetracker.app-core-1.12.0-2 C:\Users\kshat\.gradle\caches\8.9\transforms\11277b3cad23f480d6488067ff2fe0c0\transformed\core-1.12.0\res
+com.expensetracker.app-coordinatorlayout-1.1.0-3 C:\Users\kshat\.gradle\caches\8.9\transforms\17d05e7f1f00a068aabee43ca856d22e\transformed\coordinatorlayout-1.1.0\res
+com.expensetracker.app-fragment-1.6.2-4 C:\Users\kshat\.gradle\caches\8.9\transforms\22391f99e9485e08046451e3709e2a38\transformed\fragment-1.6.2\res
+com.expensetracker.app-cardview-1.0.0-5 C:\Users\kshat\.gradle\caches\8.9\transforms\29c231630eceb89ff431e6b8b18fcb6d\transformed\cardview-1.0.0\res
+com.expensetracker.app-savedstate-ktx-1.2.1-6 C:\Users\kshat\.gradle\caches\8.9\transforms\2d592a07777894f3861a529922eafd18\transformed\savedstate-ktx-1.2.1\res
+com.expensetracker.app-constraintlayout-2.1.4-7 C:\Users\kshat\.gradle\caches\8.9\transforms\3083fbcbf701c73d09cc65af0a0c99d0\transformed\constraintlayout-2.1.4\res
+com.expensetracker.app-lifecycle-viewmodel-ktx-2.7.0-8 C:\Users\kshat\.gradle\caches\8.9\transforms\3d45aa866289a19cddf3505ec01edc56\transformed\lifecycle-viewmodel-ktx-2.7.0\res
+com.expensetracker.app-appcompat-resources-1.6.1-9 C:\Users\kshat\.gradle\caches\8.9\transforms\3ebf67d335929eaebadf6fee8fb387f6\transformed\appcompat-resources-1.6.1\res
+com.expensetracker.app-activity-ktx-1.8.0-10 C:\Users\kshat\.gradle\caches\8.9\transforms\439610155f6f13f71be93051499e08c9\transformed\activity-ktx-1.8.0\res
+com.expensetracker.app-savedstate-1.2.1-11 C:\Users\kshat\.gradle\caches\8.9\transforms\451423fbfd746e7572ff016547b0f357\transformed\savedstate-1.2.1\res
+com.expensetracker.app-appcompat-1.6.1-12 C:\Users\kshat\.gradle\caches\8.9\transforms\47e928f4f4223b1146f41cadcf9f63d0\transformed\appcompat-1.6.1\res
+com.expensetracker.app-sqlite-2.4.0-13 C:\Users\kshat\.gradle\caches\8.9\transforms\4b9771c596cd695682bbdc01cb77b23a\transformed\sqlite-2.4.0\res
+com.expensetracker.app-recyclerview-1.3.2-14 C:\Users\kshat\.gradle\caches\8.9\transforms\4e620d258d678743ba42f1c14b69bf26\transformed\recyclerview-1.3.2\res
+com.expensetracker.app-lifecycle-runtime-2.7.0-15 C:\Users\kshat\.gradle\caches\8.9\transforms\54bd0f8522809541db674228e80e8cbe\transformed\lifecycle-runtime-2.7.0\res
+com.expensetracker.app-lottie-6.3.0-16 C:\Users\kshat\.gradle\caches\8.9\transforms\5569749b7282cc9780b49543c43964c1\transformed\lottie-6.3.0\res
+com.expensetracker.app-profileinstaller-1.3.0-17 C:\Users\kshat\.gradle\caches\8.9\transforms\601a8c2906a96f0cd9d48adaeae6de9b\transformed\profileinstaller-1.3.0\res
+com.expensetracker.app-core-splashscreen-1.0.1-18 C:\Users\kshat\.gradle\caches\8.9\transforms\64b8e5097c35fb78a8210a78c975f24e\transformed\core-splashscreen-1.0.1\res
+com.expensetracker.app-activity-1.8.0-19 C:\Users\kshat\.gradle\caches\8.9\transforms\6ef7ac02b1268183fe2be940114bb671\transformed\activity-1.8.0\res
+com.expensetracker.app-navigation-ui-2.7.7-20 C:\Users\kshat\.gradle\caches\8.9\transforms\6f9701a15242d1631f056dc0bbd89169\transformed\navigation-ui-2.7.7\res
+com.expensetracker.app-core-runtime-2.2.0-21 C:\Users\kshat\.gradle\caches\8.9\transforms\6ff102c752b3eadc6862783ba2ad3984\transformed\core-runtime-2.2.0\res
+com.expensetracker.app-fragment-ktx-1.6.2-22 C:\Users\kshat\.gradle\caches\8.9\transforms\77897fe7b5dc3c05a42e7d854bf691a1\transformed\fragment-ktx-1.6.2\res
+com.expensetracker.app-slidingpanelayout-1.2.0-23 C:\Users\kshat\.gradle\caches\8.9\transforms\7a839f02adb49203880bb35c8c5ac9e6\transformed\slidingpanelayout-1.2.0\res
+com.expensetracker.app-annotation-experimental-1.3.0-24 C:\Users\kshat\.gradle\caches\8.9\transforms\7df1f3c6185f0f872fa30cc5ce27d9bd\transformed\annotation-experimental-1.3.0\res
+com.expensetracker.app-transition-1.4.1-25 C:\Users\kshat\.gradle\caches\8.9\transforms\8116a319f43b73ba04199b72c2687122\transformed\transition-1.4.1\res
+com.expensetracker.app-lifecycle-runtime-ktx-2.7.0-26 C:\Users\kshat\.gradle\caches\8.9\transforms\81f05d31a9dc8bdf36784f86fe8192d0\transformed\lifecycle-runtime-ktx-2.7.0\res
+com.expensetracker.app-lifecycle-viewmodel-savedstate-2.7.0-27 C:\Users\kshat\.gradle\caches\8.9\transforms\871fa1b1d5901a17fb00bf29efdac220\transformed\lifecycle-viewmodel-savedstate-2.7.0\res
+com.expensetracker.app-emoji2-1.2.0-28 C:\Users\kshat\.gradle\caches\8.9\transforms\8e844d7497914759f9d52628cc04a5e6\transformed\emoji2-1.2.0\res
+com.expensetracker.app-lifecycle-livedata-2.7.0-29 C:\Users\kshat\.gradle\caches\8.9\transforms\958109772fb4f70f912817bd56ae35fe\transformed\lifecycle-livedata-2.7.0\res
+com.expensetracker.app-navigation-fragment-2.7.7-30 C:\Users\kshat\.gradle\caches\8.9\transforms\a1c67483caa162e354330d5f2c94c797\transformed\navigation-fragment-2.7.7\res
+com.expensetracker.app-sqlite-framework-2.4.0-31 C:\Users\kshat\.gradle\caches\8.9\transforms\ae709c577a458916d9cc0468a11d9f68\transformed\sqlite-framework-2.4.0\res
+com.expensetracker.app-lifecycle-viewmodel-2.7.0-32 C:\Users\kshat\.gradle\caches\8.9\transforms\b1dc43c7699a012cbc476dcd7d5386ca\transformed\lifecycle-viewmodel-2.7.0\res
+com.expensetracker.app-lifecycle-process-2.7.0-33 C:\Users\kshat\.gradle\caches\8.9\transforms\b74adc0b5e40465cc030d172667d26b9\transformed\lifecycle-process-2.7.0\res
+com.expensetracker.app-lifecycle-livedata-core-ktx-2.7.0-34 C:\Users\kshat\.gradle\caches\8.9\transforms\ba97c926dc3e6843b30b133ed4a76c44\transformed\lifecycle-livedata-core-ktx-2.7.0\res
+com.expensetracker.app-material-1.11.0-35 C:\Users\kshat\.gradle\caches\8.9\transforms\bc55ece3a38c21d5b7e8cab4d4caeb8b\transformed\material-1.11.0\res
+com.expensetracker.app-startup-runtime-1.1.1-36 C:\Users\kshat\.gradle\caches\8.9\transforms\c2b1a64cfac5b7f694228be243b7b056\transformed\startup-runtime-1.1.1\res
+com.expensetracker.app-drawerlayout-1.1.1-37 C:\Users\kshat\.gradle\caches\8.9\transforms\cd8b931d954f081ee1b9d79d282fb106\transformed\drawerlayout-1.1.1\res
+com.expensetracker.app-navigation-common-2.7.7-38 C:\Users\kshat\.gradle\caches\8.9\transforms\d11ca84ad2974f765aad44d1fa5340ea\transformed\navigation-common-2.7.7\res
+com.expensetracker.app-navigation-runtime-2.7.7-39 C:\Users\kshat\.gradle\caches\8.9\transforms\d8cfac1caa3b41feddb6ad9c46011d72\transformed\navigation-runtime-2.7.7\res
+com.expensetracker.app-emoji2-views-helper-1.2.0-40 C:\Users\kshat\.gradle\caches\8.9\transforms\e88b51e300fc7ec8793b1465d4cb5510\transformed\emoji2-views-helper-1.2.0\res
+com.expensetracker.app-viewpager2-1.1.0-beta02-41 C:\Users\kshat\.gradle\caches\8.9\transforms\e892956f6d6b13bcf2340a995dee8970\transformed\viewpager2-1.1.0-beta02\res
+com.expensetracker.app-room-runtime-2.6.1-42 C:\Users\kshat\.gradle\caches\8.9\transforms\ef176a20bd28b0bb6541416706a1e4c9\transformed\room-runtime-2.6.1\res
+com.expensetracker.app-lifecycle-livedata-core-2.7.0-43 C:\Users\kshat\.gradle\caches\8.9\transforms\f713ae505358fe27f4b7f80bed0a293d\transformed\lifecycle-livedata-core-2.7.0\res
+com.expensetracker.app-customview-poolingcontainer-1.0.0-44 C:\Users\kshat\.gradle\caches\8.9\transforms\fa784cb07276ad3c3805837187e2573f\transformed\customview-poolingcontainer-1.0.0\res
+com.expensetracker.app-pngs-45 D:\Projects\Expence Tracker\app\build\generated\res\pngs\release
+com.expensetracker.app-resValues-46 D:\Projects\Expence Tracker\app\build\generated\res\resValues\release
+com.expensetracker.app-packageReleaseResources-47 D:\Projects\Expence Tracker\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.expensetracker.app-packageReleaseResources-48 D:\Projects\Expence Tracker\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.expensetracker.app-merged-not-compiled-resources-49 D:\Projects\Expence Tracker\app\build\intermediates\merged-not-compiled-resources\release
+com.expensetracker.app-merged_res-50 D:\Projects\Expence Tracker\app\build\intermediates\merged_res\release
+com.expensetracker.app-main-51 D:\Projects\Expence Tracker\app\src\main\res
+com.expensetracker.app-release-52 D:\Projects\Expence Tracker\app\src\release\res
