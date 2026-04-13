@@ -13,7 +13,7 @@ A production-grade, highly interactive, and visually stunning Android applicatio
 -   **📊 Dynamic Dashboard**: A real-time overview of your finances with an animated balance counter and an interactive, sorted donut chart that breaks down spending by category.
 -   **📈 Advanced Analytics**: Visualize your financial health over time with smooth line charts and detailed category insights. Filter by Weekly, Monthly, or Yearly periods.
 -   **📂 Professional PDF Export**: Generate beautiful, professional financial reports with one tap. Perfect for tax season or auditing.
--   **💎 Premium UI/UX**:
+-   **💎 Premium UI/UX**: 
     -   **Glassmorphism Effects**: Modern, translucent UI components that feel light and airy.
     -   **Floating Navigation**: A custom-built, floating bottom navigation bar with satisfying bounce animations.
     -   **Dark-First Design**: Optimized for performance and eye comfort with a sleek #0F1115 night-themed aesthetic.
